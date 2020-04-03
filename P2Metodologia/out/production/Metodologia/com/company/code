@@ -1,0 +1,27 @@
+System.out.println("Valorar P-positivo N-Negativo S-salir");
+                        try{
+                            do{
+                                letra=escaner.escanerString();
+                                switch (letra){
+                                    case "P":
+                                        System.out.println("Dime el correo");
+                                        String correo=escaner.escanerString();
+                                        System.out.println("Dime la contraseña");
+                                        String password=escaner.escanerString();
+                                        break;
+                                    case "N":
+                                        break;
+                                }
+                            }while (letra.equals("S"));
+                        }catch (IOException ioe){
+                            ioe.printStackTrace();
+                        }
+
+Codigo del contador de positivos
+if(entrada.getTituloEntrada().equals("Hi all")){
+                            int contadorPositivo;
+                            contadorPositivo=entrada.getValoracionPositiva();
+                            contadorPositivo++;
+                            entrada.setValoracionPositiva(contadorPositivo);
+                        }
+                        System.out.println("\n" + entrada.getTituloEntrada() +" "+ entrada.getTextoEntrada()+ " " +"Positivo "+ entrada.getValoracionPositiva()+" "+ "Negativo " +entrada.getValoracionNegativa());
