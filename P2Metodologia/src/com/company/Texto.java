@@ -17,7 +17,10 @@ public class Texto extends EntradaAbstracta {
         this.texto = texto;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString()+" "+texto;
+    }
 
     @Override
     public void agregar(EntradaAbstracta ea) {

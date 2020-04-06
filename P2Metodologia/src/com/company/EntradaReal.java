@@ -39,8 +39,8 @@ public class EntradaReal extends EntradaAbstracta {
     @Override
     public void mostrar(int profundidad) {
         System.out.println(tituloEntrada+" nivel: " +profundidad);
-        for(int i=0;i<entradaAbstracta.size();i++){
-            entradaAbstracta.get(i).mostrar(profundidad+1);
+        for (EntradaAbstracta abstracta : entradaAbstracta) {
+            abstracta.mostrar(profundidad + 1);
         }
     }
 }

@@ -81,7 +81,7 @@ public class ManagerUsuario {
         }
         return null;
     }
-
+/*
     public void mostrarLasSucripciones(String correo,String password){
         for (Usuario usuario:listaDeUsuarios){
             if(usuario.getCorreo().equals(correo)&& usuario.getContraseña().equals(password)){
@@ -111,20 +111,6 @@ public class ManagerUsuario {
             }
         }
         return false;
-    }
-       /* if(usuario.getSuscripcionForos().isEmpty()){
-            usuario.getSuscripcionForos().add(subForo);
-            System.out.println("Subforo añadido");
-            return true;
-        }else if(usuario.getSuscripcionForos().equals(subForo.getTituloSubForo())){
-            System.out.println("SubForo ya añadido");
-            return false;
-        }else if(!(usuario.getSuscripcionForos().contains(subForo))){
-            usuario.getSuscripcionForos().add(subForo);
-            System.out.println("Subforo añadido");
-            return true;
-        }else{
-            return false;
-        }
     }*/
+
 }

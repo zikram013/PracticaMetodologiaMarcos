@@ -91,5 +91,37 @@ public class ManagerSubForos {
     }
 
 
+    public void mostrarLasSucripciones(SubForo subForo){
+        for (SubForo foro:listadoDeForos){
+            if(foro.getTituloSubForo().equals(subForo.getTituloSubForo())){
+                for(Usuario suscrito: foro.getUsuariosSuscritos()){
+                    System.out.println(suscrito.getNick());
+                }
+
+            }
+        }
+    }
+
+    public boolean inscripcion(SubForo subForo,Usuario usuario){
+        if(subForo.getUsuariosSuscritos().isEmpty()){
+            subForo.getUsuariosSuscritos().add(usuario);
+            System.out.println("Usted se ha inscrito en este foro "+subForo.getTituloSubForo());
+            return true;
+        }else{
+            for(SubForo foro:listadoDeForos){
+                if(foro.getTituloSubForo().equals(subForo.getTituloSubForo())){
+                    if(foro.getUsuariosSuscritos().contains(usuario)){
+                        System.out.println("Ya esta añadido");
+                        return false;
+                    }else{
+                        System.out.println("Se añade");
+                        subForo.getUsuariosSuscritos().add(usuario);
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
 }

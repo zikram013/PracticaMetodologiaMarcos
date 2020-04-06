@@ -14,7 +14,7 @@ public class Usuario {
     private String correo;
     private String contraseña;
     private String rol;
-    private HashSet<SubForo>suscripcionForos;
+    //private HashSet<SubForo>suscripcionForos;
     private static final Usuario INSTANCIAUSUARIO=new Usuario();
 
     //Constructor,getters and setters
@@ -27,20 +27,20 @@ public class Usuario {
         this.contraseña = contraseña;
         this.rol=rol;
         this.managerUsuario=managerUsuario;
-        this.suscripcionForos= new HashSet<SubForo>();
+       // this.suscripcionForos= new HashSet<SubForo>();
     }
 
     public Usuario() {
 
     }
-
+/*
     public HashSet<SubForo> getSuscripcionForos() {
         return suscripcionForos;
     }
 
     public void setSuscripcionForos(HashSet<SubForo> suscripcionForos) {
         this.suscripcionForos = suscripcionForos;
-    }
+    }*/
 
     public String getRol() {
         return rol;

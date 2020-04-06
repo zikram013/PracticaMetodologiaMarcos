@@ -13,5 +13,5 @@ Queda por realizar:
     No se debe cerrar la interfaz hasta que se pulse la tecla 0
 -notificacion de suscripcion cuando se introduce una nueva entradaAbstracta
     Realizar mediante un patron obsever y combinarlo junto con el inicio de sesion
--Patron composite
+-Patron composite(hecho)
     Realizarlo con las entradaAbstractas.

@@ -12,6 +12,7 @@ public class SubForo {
     private Texto text;
     private static final SubForo INSTANCIASUBFORO=new SubForo();
     private Escaner escaner;
+    private HashSet<Usuario>usuariosSuscritos;
 
 
     //constructor getters and setters
@@ -21,6 +22,7 @@ public class SubForo {
         this.managerSubForos=managerSubForos;
         this.entry=new HashSet<EntradaReal>();
         this.escaner=new Escaner();
+        this.usuariosSuscritos=new HashSet<Usuario>();
     }
 
 
@@ -32,6 +34,14 @@ public class SubForo {
         return INSTANCIASUBFORO;
     }
 
+
+    public HashSet<Usuario> getUsuariosSuscritos() {
+        return usuariosSuscritos;
+    }
+
+    public void setUsuariosSuscritos(HashSet<Usuario> usuariosSuscritos) {
+        this.usuariosSuscritos = usuariosSuscritos;
+    }
 
     public String getTituloSubForo() {
         return tituloSubForo;

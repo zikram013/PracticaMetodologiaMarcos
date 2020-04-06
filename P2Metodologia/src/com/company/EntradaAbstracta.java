@@ -93,19 +93,20 @@ public abstract class EntradaAbstracta {
     abstract public void eliminar(EntradaAbstracta ea);
     abstract public void mostrar(int profundidad);
 
-/*
+
+
     public boolean crearComentario(Comentarios coment){
-       if(!(subForo.getEntry().isEmpty())){
-           for(EntradaAbstracta entradaAbstracta :subForo.getEntry()){
-               if(entradaAbstracta.getTituloEntrada().equals(getTituloEntrada())){
-                   //for(Comentarios comentarios:getComentar()){
-                       System.out.println("Crea el comentario");
-                       getComentar().add(coment);
-                       return true;
-                  // }
-               }
-           }
-       }
+        if(!(subForo.getEntry().isEmpty())){
+            for(EntradaAbstracta entradaAbstracta :subForo.getEntry()){
+                if(entradaAbstracta.getTituloEntrada().equals(getTituloEntrada())){
+                    //for(Comentarios comentarios:getComentar()){
+                    System.out.println("Crea el comentario");
+                    getComentar().add(coment);
+                    return true;
+                    // }
+                }
+            }
+        }
         return false;
     }
 
@@ -122,6 +123,5 @@ public abstract class EntradaAbstracta {
             }
         }
 
-    }*/
-
+    }
 }
