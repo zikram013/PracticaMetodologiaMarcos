@@ -15,6 +15,10 @@ public class Main {
         managerUsuario.crearUsuario(usuario);
         managerUsuario.crearUsuario(usuario1);
         managerUsuario.listarUsuarios();
+        managerUsuario.iniciarSesion(usuario);
+        System.out.println("Es true inicia sesion");
+        managerUsuario.iniciarSesion(usuario);
+        System.out.println("cierra sesion");
 
         System.out.println("Creamos un foro");
         managerSubForos.crearSubforos(foro,usuario);

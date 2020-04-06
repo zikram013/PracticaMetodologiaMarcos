@@ -4,7 +4,7 @@ import java.sql.PseudoColumnUsage;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Usuario {
+public class Usuario implements SujetoObservable {
 
     //Declaracion de variables
     private ManagerUsuario managerUsuario;
@@ -14,6 +14,7 @@ public class Usuario {
     private String correo;
     private String contraseña;
     private String rol;
+    private boolean conectado;
     //private HashSet<SubForo>suscripcionForos;
     private static final Usuario INSTANCIAUSUARIO=new Usuario();
 
@@ -27,6 +28,7 @@ public class Usuario {
         this.contraseña = contraseña;
         this.rol=rol;
         this.managerUsuario=managerUsuario;
+        this.conectado=false;
        // this.suscripcionForos= new HashSet<SubForo>();
     }
 
@@ -94,6 +96,13 @@ public class Usuario {
         return INSTANCIAUSUARIO;
     }
 
+    public boolean isConectado() {
+        return conectado;
+    }
+
+    public void setConectado(boolean conectado) {
+        this.conectado = conectado;
+    }
 
     @Override
     public String toString() {
@@ -105,5 +114,10 @@ public class Usuario {
                 ", contraseña='" + contraseña + '\'' +
                 ", rol='" + rol + '\'' +
                 '}';
+    }
+
+    @Override
+    public void notificar() {
+
     }
 }

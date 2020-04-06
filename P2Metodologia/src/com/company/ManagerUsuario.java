@@ -1,15 +1,18 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class ManagerUsuario {
+public class ManagerUsuario implements SujetoObservable {
 
     private HashSet<Usuario> listaDeUsuarios;
+    private ArrayList<Observador>observadores;
 
     public ManagerUsuario(){
         this.listaDeUsuarios=new HashSet<Usuario>();
+        this.observadores=new ArrayList<Observador>();
     }
 
     public HashSet<Usuario> getListaDeUsuarios() {
@@ -21,7 +24,9 @@ public class ManagerUsuario {
         this.listaDeUsuarios = listaDeUsuarios;
     }
 
-
+    public void enlazarObservador(Observador o){
+        observadores.add(o);
+    }
 
     public boolean crearUsuario(Usuario usuario){
         if(this.getListaDeUsuarios().contains(usuario.getCorreo()) || this.getListaDeUsuarios().contains(usuario.getNick())) {
@@ -113,4 +118,20 @@ public class ManagerUsuario {
         return false;
     }*/
 
+    public void iniciarSesion(Usuario usuario){
+        if(!usuario.isConectado()){
+            usuario.setConectado(true);
+            notificar();
+        }else{
+            usuario.setConectado(false);
+        }
+        System.out.println(usuario.isConectado());
+    }
+
+    @Override
+    public void notificar() {
+        for (Observador o:observadores){
+            o.update();
+        }
+    }
 }

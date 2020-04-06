@@ -3,7 +3,7 @@ package com.company;
 import java.io.IOException;
 import java.util.HashSet;
 
-public class SubForo {
+public class SubForo implements Observador{
 
     private ManagerSubForos managerSubForos;
     private String tituloSubForo;
@@ -155,4 +155,8 @@ public class SubForo {
         }
     }
 
+    @Override
+    public void update() {
+
+    }
 }

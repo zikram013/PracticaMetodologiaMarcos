@@ -1,9 +1,10 @@
 package com.company;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class ManagerSubForos {
+public class ManagerSubForos implements Observador {
 
     private SubForo subForo=new SubForo();
     private Usuario usuario=new Usuario();
@@ -124,4 +125,12 @@ public class ManagerSubForos {
         return false;
     }
 
+    @Override
+    public void update() {
+      for(Usuario user:subForo.getUsuariosSuscritos()){
+          if(this.listadoDeForos.contains(user)){
+              System.out.println("Tiene suscripciones");
+          }
+      }
+    }
 }
