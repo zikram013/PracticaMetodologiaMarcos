@@ -1,31 +1,39 @@
 package com.company;
 
-import java.util.ArrayList;
+public class Encuesta extends EntradaAbstracta {
 
-public class Encuesta extends Entrada {
-/*
-    private String textoEncuesta;
-    private ArrayList<String>respuestasEncuesta;
+    private String cuestionario;
 
-    public Encuesta(String tituloEntrada, String textoEncuesta) {
-        super(tituloEntrada);
-        this.textoEncuesta = textoEncuesta;
-        this.respuestasEncuesta =new ArrayList<String>();
+    public Encuesta(String tituloEntrada, SubForo subForo, Usuario creador, String cuestionario) {
+        super(tituloEntrada, subForo, creador);
+        this.cuestionario = cuestionario;
     }
 
-    public String getTextoEncuesta() {
-        return textoEncuesta;
+    public String getCuestionario() {
+        return cuestionario;
     }
 
-    public void setTextoEncuesta(String textoEncuesta) {
-        this.textoEncuesta = textoEncuesta;
+    public void setCuestionario(String cuestionario) {
+        this.cuestionario = cuestionario;
     }
 
-    public ArrayList<String> getRespuestasEncuesta() {
-        return respuestasEncuesta;
+    @Override
+    public String toString() {
+        return super.toString()+" "+cuestionario;
     }
 
-    public void setRespuestasEncuesta(ArrayList<String> respuestasEncuesta) {
-        this.respuestasEncuesta = respuestasEncuesta;
-    }*/
+    @Override
+    public void agregar(EntradaAbstracta ea) {
+        System.out.println("No se puede agregar el cuestionario");
+    }
+
+    @Override
+    public void eliminar(EntradaAbstracta ea) {
+        System.out.println("No se puede quitar el cuestionario");
+    }
+
+    @Override
+    public void mostrar(int profundidad) {
+        System.out.println("- "+tituloEntrada+" "+cuestionario);
+    }
 }

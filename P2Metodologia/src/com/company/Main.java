@@ -6,24 +6,30 @@ public class Main {
 	// write your code here
         ManagerSubForos managerSubForos=new ManagerSubForos();
         ManagerUsuario managerUsuario=new ManagerUsuario();
+
         Usuario usuario=new Usuario("marcos","sanchez","zikram","hola","pass","profesor",managerUsuario);
         Usuario usuario1=new Usuario("miguel","ruiz","yoshiki","yoshiki","verboten","alumno",managerUsuario);
         SubForo foro=new SubForo("Prueba",managerSubForos);
         SubForo foro2=new SubForo("Prueba2",managerSubForos);
-        Entrada entrada=new Entrada("Hi all", "Como esta ustedes",foro,usuario);
-        Comentarios comentarios1=new Comentarios("me gusta");
-        managerSubForos.crearSubforos(foro);
+        System.out.println("Se crean los usuarios");
         managerUsuario.crearUsuario(usuario);
         managerUsuario.crearUsuario(usuario1);
-        managerSubForos.crearSubforos(foro2);
-        foro.crearEntrada(entrada);
-        entrada.getComentar().add(comentarios1);
+        managerUsuario.listarUsuarios();
 
+        System.out.println("Creamos un foro");
+        managerSubForos.crearSubforos(foro,usuario);
+        managerSubForos.crearSubforos(foro2,usuario);
 
-        //SubForo foro3=new SubForo("Foro");
-        //managerSubForos.crearSubforos(foro3);
-        InterfazUsuario iu=new InterfazUsuario(managerSubForos,managerUsuario);
-        iu.inicializarMenu(Usuario.getInstanciausuario());
+        System.out.println("Los listamos");
+        managerSubForos.mostrarSubForo();
+
+        System.out.println("Momento dificil: Comprobar si funciona el patron composite");
+        EntradaReal entradaReal=new EntradaReal("Hola",foro,usuario);
+        entradaReal.agregar(new Encuesta(entradaReal.tituloEntrada,foro,usuario,"pfff"));
+        entradaReal.agregar(new Ejercicios(entradaReal.tituloEntrada,foro,usuario,"suspenspo"));
+        foro.crearEntrada(entradaReal);
+        foro.listarEntrada(foro.getTituloSubForo());
+
 
 
     }

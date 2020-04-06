@@ -1,51 +1,37 @@
 package com.company;
 
-import java.util.HashSet;
+public class Texto extends EntradaAbstracta {
 
-public class Texto extends Entrada {
+    private String texto;
 
-/*
-    private HashSet<Texto>textos;
-    private HashSet<SubForo>subforo;
-    private String cuerpoTexto;
-
-    public Texto(String tituloEntrada, String cuerpoTexto) {
-        super(tituloEntrada);
-
-        this.cuerpoTexto = cuerpoTexto;
-        this.textos=new HashSet<Texto>();
+    public Texto(String tituloEntrada, SubForo subForo, Usuario creador, String texto) {
+        super(tituloEntrada, subForo, creador);
+        this.texto = texto;
     }
 
-    public HashSet<Texto> getTextos() {
-        return textos;
+    public String getTexto() {
+        return texto;
     }
 
-    public void setTextos(HashSet<Texto> textos) {
-        this.textos = textos;
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
 
-    public HashSet<SubForo> getSubforo() {
-        return subforo;
-    }
 
-    public void setSubforo(HashSet<SubForo> subforo) {
-        this.subforo = subforo;
-    }
 
-    public String getCuerpoTexto() {
-        return cuerpoTexto;
-    }
-
-    public void setCuerpoTexto(String cuerpoTexto) {
-        this.cuerpoTexto = cuerpoTexto;
+    @Override
+    public void agregar(EntradaAbstracta ea) {
+        System.out.println("No se puede quitar el texto");
     }
 
     @Override
-    public String toString() {
-        return "Texto{" +
-                "cuerpoTexto='" + cuerpoTexto + '\'' +
-                '}';
-    }*/
+    public void eliminar(EntradaAbstracta ea) {
+        System.out.println("No se puede quitar el texto");
+    }
 
+    @Override
+    public void mostrar(int profundidad) {
+        System.out.println("- "+tituloEntrada+" "+texto);
+    }
 
 }

@@ -1,8 +1,6 @@
 package com.company;
-
-import javax.xml.transform.Source;
+/*
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class InterfazUsuario {
@@ -20,7 +18,7 @@ public class InterfazUsuario {
         escaner=new Escaner();
         this.usuario=new ArrayList<>();
 
-        this.entrada=new Entrada();
+        this.entrada=new Entrada(tituloEntrada, textoEntrada);
     }
 
     public ArrayList<Usuario> getUsuario() {
@@ -394,3 +392,4 @@ public class InterfazUsuario {
 
     }
 }
+*/

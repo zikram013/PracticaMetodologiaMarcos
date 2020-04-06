@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 
 public class ManagerSubForos {
 
@@ -10,21 +9,21 @@ public class ManagerSubForos {
     private Usuario usuario=new Usuario();
     private HashSet<String> foro;
     private HashSet<SubForo>listadoDeForos;
-    private HashSet<Entrada> entradas;
+    private HashSet<EntradaAbstracta> entradaAbstractas;
     private static ArrayList<Usuario>usuarios;
 
     public ManagerSubForos(){
         this.listadoDeForos=new HashSet<SubForo>();
         this.usuarios=new ArrayList<Usuario>();
-        this.entradas=new HashSet<Entrada>();
+        this.entradaAbstractas =new HashSet<EntradaAbstracta>();
     }
 
-    public HashSet<Entrada> getEntradas() {
-        return entradas;
+    public HashSet<EntradaAbstracta> getEntradaAbstractas() {
+        return entradaAbstractas;
     }
 
-    public void setEntradas(HashSet<Entrada> entradas) {
-        this.entradas = entradas;
+    public void setEntradaAbstractas(HashSet<EntradaAbstracta> entradaAbstractas) {
+        this.entradaAbstractas = entradaAbstractas;
     }
 
     public HashSet<SubForo> getListadoDeForos() {
@@ -50,18 +49,23 @@ public class ManagerSubForos {
         }
     }
 
-    public boolean crearSubforos(SubForo subforo){
-        if(!(this.getListadoDeForos()==null)){
-            if(this.getListadoDeForos().contains(subforo)) {
-                return false;
+    public boolean crearSubforos(SubForo subforo,Usuario usuario){
+        if(usuario.getRol().equals("Profesor") || usuario.getRol().equals("profesor")){
+            if(!(this.getListadoDeForos()==null)){
+                if(this.getListadoDeForos().contains(subforo)) {
+                    return false;
+                }else{
+                    System.out.println("entro");
+                    listadoDeForos.add(subforo);
+                    return true;
+                }
             }else{
-                System.out.println("entro");
-                listadoDeForos.add(subforo);
-                return true;
+                return false;
             }
         }else{
             return false;
         }
+
     }
 
     public boolean encontrarSubforos(String nombreDelSubForo){

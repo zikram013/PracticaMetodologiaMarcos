@@ -1,34 +1,27 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
-public class Entrada {
+public abstract class EntradaAbstracta {
 
     private SubForo subForo;
-    private String tituloEntrada;
+    protected String tituloEntrada;
     private ArrayList<Comentarios>comentar;
     private int valoracionPositiva;
     private int valoracionNegativa;
-    private String textoEntrada;
     private ArrayList<Usuario>usuarioHaVotado;
     private Usuario creador;
 
-    public Entrada(String tituloEntrada,String textoEntrada,SubForo subForo,Usuario creador) {
+    public EntradaAbstracta(String tituloEntrada, SubForo subForo, Usuario creador) {
         this.tituloEntrada = tituloEntrada;
         this.comentar = new ArrayList<Comentarios>();
         this.usuarioHaVotado=new ArrayList<Usuario>();
         this.valoracionPositiva = 0;
         this.valoracionNegativa = 0;
-        this.textoEntrada= textoEntrada;
         this.subForo=subForo;
         this.creador=creador;
     }
 
-
-    public Entrada() {
-
-    }
 
     public Usuario getCreador() {
         return creador;
@@ -36,14 +29,6 @@ public class Entrada {
 
     public void setCreador(Usuario creador) {
         this.creador = creador;
-    }
-
-    public String getTextoEntrada() {
-        return textoEntrada;
-    }
-
-    public void setTextoEntrada(String textoEntrada) {
-        this.textoEntrada = textoEntrada;
     }
 
     public String getTituloEntrada() {
@@ -86,10 +71,33 @@ public class Entrada {
         this.usuarioHaVotado = usuarioHaVotado;
     }
 
+    public SubForo getSubForo() {
+        return subForo;
+    }
+
+    public void setSubForo(SubForo subForo) {
+        this.subForo = subForo;
+    }
+
+    @Override
+    public String toString() {
+        return "EntradaAbstracta{" +
+                "tituloEntrada='" + tituloEntrada + '\'' +
+                ", valoracionPositiva=" + valoracionPositiva +
+                ", valoracionNegativa=" + valoracionNegativa +
+                ", creador=" + creador.getNick() +
+                '}';
+    }
+
+    abstract public void agregar(EntradaAbstracta ea);
+    abstract public void eliminar(EntradaAbstracta ea);
+    abstract public void mostrar(int profundidad);
+
+/*
     public boolean crearComentario(Comentarios coment){
        if(!(subForo.getEntry().isEmpty())){
-           for(Entrada entrada:subForo.getEntry()){
-               if(entrada.getTituloEntrada().equals(getTituloEntrada())){
+           for(EntradaAbstracta entradaAbstracta :subForo.getEntry()){
+               if(entradaAbstracta.getTituloEntrada().equals(getTituloEntrada())){
                    //for(Comentarios comentarios:getComentar()){
                        System.out.println("Crea el comentario");
                        getComentar().add(coment);
@@ -102,8 +110,8 @@ public class Entrada {
     }
 
     public void mostrarComentarios(String nombreEntrada){
-        for(Entrada entrada:subForo.getEntry()){
-            if (entrada.getTituloEntrada().equals(nombreEntrada)){
+        for(EntradaAbstracta entradaAbstracta :subForo.getEntry()){
+            if (entradaAbstracta.getTituloEntrada().equals(nombreEntrada)){
                 for(Comentarios comentarios:comentar){
                     if(!(comentar.isEmpty())){
                         System.out.println("\n" + comentarios.getComentario());
@@ -114,6 +122,6 @@ public class Entrada {
             }
         }
 
-    }
+    }*/
 
 }

@@ -1,0 +1,8 @@
+//foro.crearEntrada(entradaAbstracta);
+        //entradaAbstracta.getComentar().add(comentarios1);
+        // EntradaAbstracta entradaAbstracta =new EntradaAbstracta("Hi all", "Como esta ustedes",foro,usuario);
+        //Comentarios comentarios1=new Comentarios("me gusta");
+        //SubForo foro3=new SubForo("Foro");
+        //managerSubForos.crearSubforos(foro3);
+        //InterfazUsuario iu=new InterfazUsuario(managerSubForos,managerUsuario);
+        //iu.inicializarMenu(Usuario.getInstanciausuario());

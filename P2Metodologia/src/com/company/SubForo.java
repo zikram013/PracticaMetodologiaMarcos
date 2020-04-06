@@ -1,19 +1,14 @@
 package com.company;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 
 public class SubForo {
 
     private ManagerSubForos managerSubForos;
     private String tituloSubForo;
     private HashSet<Texto> textito;
-    private HashSet<Entrada>entry;
+    private HashSet<EntradaReal>entry;
     private Texto text;
     private static final SubForo INSTANCIASUBFORO=new SubForo();
     private Escaner escaner;
@@ -24,7 +19,7 @@ public class SubForo {
         this.tituloSubForo = tituloSubForo;
         this.textito = new HashSet<Texto>();
         this.managerSubForos=managerSubForos;
-        this.entry=new HashSet<Entrada>();
+        this.entry=new HashSet<EntradaReal>();
         this.escaner=new Escaner();
     }
 
@@ -47,29 +42,29 @@ public class SubForo {
     }
 
 
-    public HashSet<Entrada> getEntry() {
+    public HashSet<EntradaReal> getEntry() {
         return entry;
     }
 
-    public void setEntry(HashSet<Entrada> entry) {
+    public void setEntry(HashSet<EntradaReal> entry) {
         this.entry = entry;
     }
 
-    public boolean crearEntrada(Entrada ent) {
+    public boolean crearEntrada(EntradaAbstracta ent) {
             if(!(managerSubForos.getListadoDeForos().isEmpty())){
                 for (SubForo subForo : managerSubForos.getListadoDeForos()) {
                     if (subForo.getTituloSubForo().equals(getTituloSubForo())) {
                         System.out.println("Buscando entradas con nombre similar en el subforo "+ subForo.getTituloSubForo());
-                        for (Entrada entrada : getEntry()) {
+                        for (EntradaReal entradaReal : getEntry()) {
                             System.out.println("leyendo entradas");
-                            if (!(entrada.equals(ent))) {
+                            if (!(entradaReal.equals(ent))) {
                                 System.out.println("crea entrada");
-                                getEntry().add(ent);
+                                getEntry().add((EntradaReal) ent);
                                 return true;
                             }
                         }
                         if(getEntry().isEmpty()){
-                            getEntry().add(ent);
+                            getEntry().add((EntradaReal) ent);
                             return true;
                         }
                     }
@@ -82,9 +77,10 @@ public class SubForo {
         for(SubForo subForo: managerSubForos.getListadoDeForos()){
             if(subForo.getTituloSubForo().equals(subForos)){
                 System.out.println("listado de entradas");
-                for (Entrada entrada : entry) {
+                for (EntradaReal entradaReal : entry) {
                     if (!(entry.isEmpty())){
-                        System.out.println("\n" + entrada.getTituloEntrada() +" "+ entrada.getTextoEntrada()+ " " +"Positivo "+ entrada.getValoracionPositiva()+" "+ "Negativo " +entrada.getValoracionNegativa()+" Escrito por: "+entrada.getCreador().getNick());
+                       // System.out.println("\n" + entradaAbstracta.getTituloEntrada() +" " + +" "+"Positivo "+ entradaAbstracta.getValoracionPositiva()+" "+ "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                        System.out.println(entradaReal.toString());
                     }else{
                         System.out.println("No tiene entradas");
                     }
@@ -94,53 +90,48 @@ public class SubForo {
         }
     }
 
-    public Entrada getEntradaEncontrada(String tituloDeLaEntrada){
+    public EntradaAbstracta getEntradaEncontrada(String tituloDeLaEntrada){
        // System.out.println("Buscando el subforo");
-        for (Entrada entrada:entry){
-            if(entrada.getTituloEntrada().equals(tituloDeLaEntrada)){
+        for (EntradaAbstracta entradaAbstracta :entry){
+            if(entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)){
                // System.out.println("Subforo encontrado");
-                return entrada;
+                return entradaAbstracta;
             }
         }
         return null;
     }
 
-    public void votarEntrada(Usuario user,String tituloDeLaEntrada,String tituloSubForo){
-        String letra;
+    public void votarEntrada(Usuario user,String tituloDeLaEntrada,String tituloSubForo,String voto){
+        String letra=voto;
         for(SubForo subForo: managerSubForos.getListadoDeForos()){
             if(subForo.getTituloSubForo().equals(tituloSubForo)) {
                 System.out.println("listado de entradas");
-                for (Entrada entrada : entry) {
+                for (EntradaAbstracta entradaAbstracta : entry) {
                     if (!(entry.isEmpty())) {
-                        System.out.println("\n" + entrada.getTituloEntrada() + " " + entrada.getTextoEntrada() + " " + "Positivo " + entrada.getValoracionPositiva() + " " + "Negativo " + entrada.getValoracionNegativa()+" Escrito por: "+entrada.getCreador().getNick());
-                        if (entrada.getTituloEntrada().equals(tituloDeLaEntrada)) {
-                            if((entrada.getUsuarioHaVotado().isEmpty()) || (!(entrada.getUsuarioHaVotado().contains(user)))) {
+                        System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                        if (entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)) {
+                            if((entradaAbstracta.getUsuarioHaVotado().isEmpty()) || (!(entradaAbstracta.getUsuarioHaVotado().contains(user)))) {
                                 System.out.println("Valorar P-positivo N-Negativo");
-                                try {
-                                    do {
-                                        letra = escaner.escanerString();
-                                        switch (letra) {
-                                            case "P":
-                                                entrada.getUsuarioHaVotado().add(user);
-                                                int contadorPositivo;
-                                                contadorPositivo = entrada.getValoracionPositiva();
-                                                contadorPositivo++;
-                                                entrada.setValoracionPositiva(contadorPositivo);
-                                                System.out.println("\n" + entrada.getTituloEntrada() + " " + entrada.getTextoEntrada() + " " + "Positivo " + entrada.getValoracionPositiva() + " " + "Negativo " + entrada.getValoracionNegativa()+" Escrito por: "+entrada.getCreador().getNick());
-                                                break;
-                                            case "N":
-                                                entrada.getUsuarioHaVotado().add(user);
-                                                int contadorNegativo;
-                                                contadorNegativo = entrada.getValoracionNegativa();
-                                                contadorNegativo++;
-                                                entrada.setValoracionNegativa(contadorNegativo);
-                                                System.out.println("\n" + entrada.getTituloEntrada() + " " + entrada.getTextoEntrada() + " " + "Positivo " + entrada.getValoracionPositiva() + " " + "Negativo " + entrada.getValoracionNegativa()+" Escrito por: "+entrada.getCreador().getNick());
-                                                break;
-                                        }
-                                    } while (letra.equals("S"));
-                                } catch (IOException ioe) {
-                                    ioe.printStackTrace();
-                                }
+                                do {
+                                    switch (letra) {
+                                        case "P":
+                                            entradaAbstracta.getUsuarioHaVotado().add(user);
+                                            int contadorPositivo;
+                                            contadorPositivo = entradaAbstracta.getValoracionPositiva();
+                                            contadorPositivo++;
+                                            entradaAbstracta.setValoracionPositiva(contadorPositivo);
+                                            System.out.println("\n" + entradaAbstracta.getTituloEntrada() +  " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                                            break;
+                                        case "N":
+                                            entradaAbstracta.getUsuarioHaVotado().add(user);
+                                            int contadorNegativo;
+                                            contadorNegativo = entradaAbstracta.getValoracionNegativa();
+                                            contadorNegativo++;
+                                            entradaAbstracta.setValoracionNegativa(contadorNegativo);
+                                            System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                                            break;
+                                    }
+                                } while (letra.equals("S"));
                             }else {
                                 System.out.println("no puede votar o ya ha votado");
                             }
@@ -153,4 +144,5 @@ public class SubForo {
             }
         }
     }
+
 }

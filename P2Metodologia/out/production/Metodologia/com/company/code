@@ -1,27 +1,17 @@
-System.out.println("Valorar P-positivo N-Negativo S-salir");
-                        try{
-                            do{
-                                letra=escaner.escanerString();
-                                switch (letra){
-                                    case "P":
-                                        System.out.println("Dime el correo");
-                                        String correo=escaner.escanerString();
-                                        System.out.println("Dime la contraseña");
-                                        String password=escaner.escanerString();
-                                        break;
-                                    case "N":
-                                        break;
-                                }
-                            }while (letra.equals("S"));
-                        }catch (IOException ioe){
-                            ioe.printStackTrace();
-                        }
-
-Codigo del contador de positivos
-if(entrada.getTituloEntrada().equals("Hi all")){
-                            int contadorPositivo;
-                            contadorPositivo=entrada.getValoracionPositiva();
-                            contadorPositivo++;
-                            entrada.setValoracionPositiva(contadorPositivo);
-                        }
-                        System.out.println("\n" + entrada.getTituloEntrada() +" "+ entrada.getTextoEntrada()+ " " +"Positivo "+ entrada.getValoracionPositiva()+" "+ "Negativo " +entrada.getValoracionNegativa());
+Queda por realizar:
+-Rol
+    Segun el correo que se meta se considerara profesor o alumno.
+-Verificacion de las entradaAbstractas
+    La idea es introducir un boolean que cambie si la entradaAbstracta es valida o no
+    Las entradaAbstractas primero se enviarian a un array en verificacion y desde hay
+    se aceptaran o no con la consiguiente penalizacion.
+-controladores de guardado y carga por archivo
+    Realizar la carga y descarga de datos con archivos de texto
+-inicio de sesion
+    control mediante un boolean y junto con la combinacion de un patron obsever
+    para mantener el inicio de sesion de un miembro hasta su desconexion.
+    No se debe cerrar la interfaz hasta que se pulse la tecla 0
+-notificacion de suscripcion cuando se introduce una nueva entradaAbstracta
+    Realizar mediante un patron obsever y combinarlo junto con el inicio de sesion
+-Patron composite
+    Realizarlo con las entradaAbstractas.
