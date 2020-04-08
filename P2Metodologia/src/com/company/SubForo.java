@@ -1,10 +1,14 @@
 package com.company;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 
-public class SubForo implements Observador{
+public class SubForo implements SujetoObservable{
 
+    private ArrayList<Observador>chivatos;
     private ManagerSubForos managerSubForos;
     private String tituloSubForo;
     private HashSet<Texto> textito;
@@ -23,6 +27,7 @@ public class SubForo implements Observador{
         this.entry=new HashSet<EntradaReal>();
         this.escaner=new Escaner();
         this.usuariosSuscritos=new HashSet<Usuario>();
+        this.chivatos=new ArrayList<>();
     }
 
 
@@ -65,17 +70,21 @@ public class SubForo implements Observador{
                 for (SubForo subForo : managerSubForos.getListadoDeForos()) {
                     if (subForo.getTituloSubForo().equals(getTituloSubForo())) {
                         System.out.println("Buscando entradas con nombre similar en el subforo "+ subForo.getTituloSubForo());
-                        for (EntradaReal entradaReal : getEntry()) {
-                            System.out.println("leyendo entradas");
-                            if (!(entradaReal.equals(ent))) {
-                                System.out.println("crea entrada");
-                                getEntry().add((EntradaReal) ent);
-                                return true;
-                            }
-                        }
                         if(getEntry().isEmpty()){
                             getEntry().add((EntradaReal) ent);
+                            System.out.println("crea entrada");
+                            notificar();
                             return true;
+                        }else{
+                            for (EntradaReal entradaReal : getEntry()) {
+                                System.out.println("leyendo entradas");
+                                if (!(entradaReal.equals(ent))) {
+                                    System.out.println("crea entrada");
+                                    getEntry().add((EntradaReal) ent);
+                                    notificar();
+                                    return true;
+                                }
+                            }
                         }
                     }
                 }
@@ -155,8 +164,23 @@ public class SubForo implements Observador{
         }
     }
 
+
     @Override
-    public void update() {
+    public void notificar() {
+        for(Observador chivato:chivatos){
+           chivato.update(tituloSubForo);
+        }
+        System.out.println("chivame");
+    }
+
+    @Override
+    public void addObserver(Observador observador) {
+        chivatos.add(observador);
+    }
+
+    @Override
+    public void deleteObserver(Observador observador) {
+        chivatos.remove(observador);
 
     }
 }

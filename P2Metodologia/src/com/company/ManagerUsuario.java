@@ -1,18 +1,17 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 
-public class ManagerUsuario implements SujetoObservable {
+public class ManagerUsuario implements Observador {
 
     private HashSet<Usuario> listaDeUsuarios;
-    private ArrayList<Observador>observadores;
+   private ArrayList<String>foroActualizado;
+
 
     public ManagerUsuario(){
         this.listaDeUsuarios=new HashSet<Usuario>();
-        this.observadores=new ArrayList<Observador>();
+        this.foroActualizado=new ArrayList<String>();
     }
 
     public HashSet<Usuario> getListaDeUsuarios() {
@@ -24,15 +23,13 @@ public class ManagerUsuario implements SujetoObservable {
         this.listaDeUsuarios = listaDeUsuarios;
     }
 
-    public void enlazarObservador(Observador o){
-        observadores.add(o);
-    }
+
 
     public boolean crearUsuario(Usuario usuario){
         if(this.getListaDeUsuarios().contains(usuario.getCorreo()) || this.getListaDeUsuarios().contains(usuario.getNick())) {
             return false;
         }else{
-            System.out.println("entro");
+
             listaDeUsuarios.add(usuario);
             return true;
         }
@@ -121,17 +118,28 @@ public class ManagerUsuario implements SujetoObservable {
     public void iniciarSesion(Usuario usuario){
         if(!usuario.isConectado()){
             usuario.setConectado(true);
-            notificar();
+            for(String forosUpdate: foroActualizado){
+                System.out.println("el foro "+forosUpdate+" tiene nuevas entradas");
+            }
         }else{
             usuario.setConectado(false);
+            System.out.println("este usuario esta desconectado");
         }
         System.out.println(usuario.isConectado());
     }
 
-    @Override
-    public void notificar() {
-        for (Observador o:observadores){
-            o.update();
+    public void desconectar(Usuario usuario){
+        if(usuario.isConectado()) {
+            usuario.setConectado(false);
         }
     }
+
+
+
+    @Override
+    public void update(String s) {
+
+        foroActualizado.add(s);
+    }
+
 }

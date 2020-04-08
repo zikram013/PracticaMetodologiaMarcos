@@ -4,7 +4,7 @@ import java.sql.PseudoColumnUsage;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Usuario implements SujetoObservable {
+public class Usuario  {
 
     //Declaracion de variables
     private ManagerUsuario managerUsuario;
@@ -15,12 +15,13 @@ public class Usuario implements SujetoObservable {
     private String contraseña;
     private String rol;
     private boolean conectado;
+    private boolean sancion;
     //private HashSet<SubForo>suscripcionForos;
     private static final Usuario INSTANCIAUSUARIO=new Usuario();
 
     //Constructor,getters and setters
 
-    public Usuario(String nombre, String apellido, String nick, String correo, String contraseña,String rol,ManagerUsuario managerUsuario) {
+    public Usuario(String nombre, String apellido, String nick, String correo, String contraseña,String rol) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.nick = nick;
@@ -116,8 +117,5 @@ public class Usuario implements SujetoObservable {
                 '}';
     }
 
-    @Override
-    public void notificar() {
 
-    }
 }

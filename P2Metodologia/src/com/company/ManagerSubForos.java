@@ -1,6 +1,5 @@
 package com.company;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -12,11 +11,13 @@ public class ManagerSubForos implements Observador {
     private HashSet<SubForo>listadoDeForos;
     private HashSet<EntradaAbstracta> entradaAbstractas;
     private static ArrayList<Usuario>usuarios;
+    private ManagerUsuario managerUsuario;
 
-    public ManagerSubForos(){
+    public ManagerSubForos(ManagerUsuario managerUsuario){
         this.listadoDeForos=new HashSet<SubForo>();
         this.usuarios=new ArrayList<Usuario>();
         this.entradaAbstractas =new HashSet<EntradaAbstracta>();
+        this.managerUsuario=managerUsuario;
     }
 
     public HashSet<EntradaAbstracta> getEntradaAbstractas() {
@@ -56,7 +57,8 @@ public class ManagerSubForos implements Observador {
                 if(this.getListadoDeForos().contains(subforo)) {
                     return false;
                 }else{
-                    System.out.println("entro");
+                    System.out.println("sub foro creado");
+                    subforo.addObserver(managerUsuario);
                     listadoDeForos.add(subforo);
                     return true;
                 }
@@ -126,7 +128,7 @@ public class ManagerSubForos implements Observador {
     }
 
     @Override
-    public void update() {
+    public void update(String s) {
       for(Usuario user:subForo.getUsuariosSuscritos()){
           if(this.listadoDeForos.contains(user)){
               System.out.println("Tiene suscripciones");

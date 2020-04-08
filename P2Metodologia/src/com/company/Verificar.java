@@ -1,13 +1,12 @@
 package com.company;
 
 public class Verificar {
-/*
-    private boolean aceptado;
-    private EntradaAbstracta entradaAbstracta =new EntradaAbstracta(tituloEntrada, textoEntrada);
 
-    public Verificar(boolean aceptado, EntradaAbstracta entradaAbstracta) {
+    private boolean aceptado;
+
+
+    public Verificar(boolean aceptado) {
         this.aceptado = aceptado;
-        this.entradaAbstracta = entradaAbstracta;
     }
 
     public boolean isAceptado() {
@@ -18,11 +17,4 @@ public class Verificar {
         this.aceptado = aceptado;
     }
 
-    public EntradaAbstracta getEntradaAbstracta() {
-        return entradaAbstracta;
-    }
-
-    public void setEntradaAbstracta(EntradaAbstracta entradaAbstracta) {
-        this.entradaAbstracta = entradaAbstracta;
-    }*/
 }
