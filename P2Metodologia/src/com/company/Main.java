@@ -16,6 +16,7 @@ public class Main {
         Usuario admin=new Usuario("admin","admin","admin","admin","admin","admin");
         managerUsuario.crearUsuario(usuario);
         managerUsuario.crearUsuario(usuario1);
+        managerUsuario.crearUsuario(admin);
         //iniciamos sesion
         managerUsuario.iniciarSesion(usuario);
         //Creamos subforos
@@ -34,11 +35,12 @@ public class Main {
 
         managerUsuario.desconectar(usuario);
 
+
         managerUsuario.iniciarSesion(admin);
         verificar.mostrarEntradasParaVerificar(admin);
         verificar.verificacion("D",entradaReal,admin);
         verificar.eliminar(entradaReal);
-        verificar.eliminar(entradaReal);
+        //verificar.eliminar(entradaReal);
         managerUsuario.desconectar(admin);
 
         System.out.println("el usuario "+usuario.getRol()+" esta sancionado " +usuario.isSancion());

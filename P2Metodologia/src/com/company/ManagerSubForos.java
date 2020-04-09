@@ -52,7 +52,7 @@ public class ManagerSubForos implements Observador {
     }
 
     public boolean crearSubforos(SubForo subforo,Usuario usuario){
-        if(usuario.getRol().equals("Profesor") || usuario.getRol().equals("profesor")){
+        if(managerUsuario.encontradoRolProfesor(usuario)){
             if(!(this.getListadoDeForos()==null)){
                 if(this.getListadoDeForos().contains(subforo)) {
                     return false;

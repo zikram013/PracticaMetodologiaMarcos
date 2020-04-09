@@ -19,6 +19,7 @@ public class SubForo implements SujetoObservable{
     private HashSet<Usuario>usuariosSuscritos;
 
 
+
     //constructor getters and setters
     public SubForo(String tituloSubForo,ManagerSubForos managerSubForos) {
         this.tituloSubForo = tituloSubForo;
@@ -122,46 +123,51 @@ public class SubForo implements SujetoObservable{
 
     public void votarEntrada(Usuario user,String tituloDeLaEntrada,String tituloSubForo,String voto){
         String letra=voto;
-        for(SubForo subForo: managerSubForos.getListadoDeForos()){
-            if(subForo.getTituloSubForo().equals(tituloSubForo)) {
-                System.out.println("listado de entradas");
-                for (EntradaAbstracta entradaAbstracta : entry) {
-                    if (!(entry.isEmpty())) {
-                        System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
-                        if (entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)) {
-                            if((entradaAbstracta.getUsuarioHaVotado().isEmpty()) || (!(entradaAbstracta.getUsuarioHaVotado().contains(user)))) {
-                                System.out.println("Valorar P-positivo N-Negativo");
-                                do {
-                                    switch (letra) {
-                                        case "P":
-                                            entradaAbstracta.getUsuarioHaVotado().add(user);
-                                            int contadorPositivo;
-                                            contadorPositivo = entradaAbstracta.getValoracionPositiva();
-                                            contadorPositivo++;
-                                            entradaAbstracta.setValoracionPositiva(contadorPositivo);
-                                            System.out.println("\n" + entradaAbstracta.getTituloEntrada() +  " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
-                                            break;
-                                        case "N":
-                                            entradaAbstracta.getUsuarioHaVotado().add(user);
-                                            int contadorNegativo;
-                                            contadorNegativo = entradaAbstracta.getValoracionNegativa();
-                                            contadorNegativo++;
-                                            entradaAbstracta.setValoracionNegativa(contadorNegativo);
-                                            System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
-                                            break;
-                                    }
-                                } while (letra.equals("S"));
-                            }else {
-                                System.out.println("no puede votar o ya ha votado");
+        if(user.isConectado()){
+            for(SubForo subForo: managerSubForos.getListadoDeForos()){
+                if(subForo.getTituloSubForo().equals(tituloSubForo)) {
+                    System.out.println("listado de entradas");
+                    for (EntradaAbstracta entradaAbstracta : entry) {
+                        if (!(entry.isEmpty())) {
+                            System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                            if (entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)) {
+                                if((entradaAbstracta.getUsuarioHaVotado().isEmpty()) || (!(entradaAbstracta.getUsuarioHaVotado().contains(user)))) {
+                                    System.out.println("Valorar P-positivo N-Negativo");
+                                    do {
+                                        switch (letra) {
+                                            case "P":
+                                                entradaAbstracta.getUsuarioHaVotado().add(user);
+                                                int contadorPositivo;
+                                                contadorPositivo = entradaAbstracta.getValoracionPositiva();
+                                                contadorPositivo++;
+                                                entradaAbstracta.setValoracionPositiva(contadorPositivo);
+                                                System.out.println("\n" + entradaAbstracta.getTituloEntrada() +  " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                                                break;
+                                            case "N":
+                                                entradaAbstracta.getUsuarioHaVotado().add(user);
+                                                int contadorNegativo;
+                                                contadorNegativo = entradaAbstracta.getValoracionNegativa();
+                                                contadorNegativo++;
+                                                entradaAbstracta.setValoracionNegativa(contadorNegativo);
+                                                System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                                                break;
+                                        }
+                                    } while (letra.equals("S"));
+                                }else {
+                                    System.out.println("no puede votar o ya ha votado");
+                                }
+                            } else {
+                                System.out.println("No tiene entradas");
                             }
-                        } else {
-                            System.out.println("No tiene entradas");
                         }
                     }
-                }
 
+                }
             }
+        }else{
+            System.out.println("no puede votar");
         }
+
     }
 
 

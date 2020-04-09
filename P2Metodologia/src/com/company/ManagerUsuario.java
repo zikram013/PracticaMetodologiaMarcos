@@ -42,12 +42,11 @@ public class ManagerUsuario implements Observador {
         }
     }
 
-    public  boolean encontradoRolProfesor(String correo,String password){
-        System.out.println("realizo la busqueda");
-        for(Usuario usuario: listaDeUsuarios) {
-            if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)) {
-                System.out.println("El nombre del usuario es"+usuario.getNombre()+"El rol del usuario es"+usuario.getRol());
-                return true;
+    public  boolean encontradoRolProfesor(Usuario buscarUsuario){
+        for(Usuario usuario:listaDeUsuarios){
+            if(usuario.getRol().equals("profesor")) {
+                if(usuario.equals(buscarUsuario))
+                    return true;
             }
         }
         return false;
@@ -55,28 +54,28 @@ public class ManagerUsuario implements Observador {
 
     public boolean encontradoRolAdmin(Usuario buscarUsuario){
         for(Usuario usuario:listaDeUsuarios){
-            if(usuario.equals(buscarUsuario)){
-                return true;
+               if(usuario.getRol().equals("admin")) {
+                   if(usuario.equals(buscarUsuario))
+                    return true;
+                }
+        }
+        return false;
+    }
+
+    public boolean encontradoRolAlumno(Usuario buscarUsuario){
+        for(Usuario usuario:listaDeUsuarios){
+            if(usuario.getRol().equals("alumno")) {
+                if(usuario.equals(buscarUsuario))
+                    return true;
             }
         }
         return false;
     }
-/*
-    public boolean encontradoRolAlumno(String correo,String password){
-        System.out.println("Realizando busqueda");
-        for(Usuario usuario:listaDeUsuarios){
-            if(usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)){
-                System.out.println("El nombre del usuario es"+usuario.getNombre()+"El rol del usuario es"+usuario.getRol());
-                return true;
-            }
-        }
-        return false;
-    }*/
 
-    public boolean usuarioRegistrado(String correo,String password){
+    public boolean usuarioRegistrado(Usuario usuarioExiste){
         System.out.println("Comprobando que existe en el sistema");
         for(Usuario usuario :listaDeUsuarios){
-            if(usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)){
+            if(usuario.equals(usuarioExiste)){
                 System.out.println("El usuario exixte");
                 return true;
             }
@@ -94,7 +93,7 @@ public class ManagerUsuario implements Observador {
     }
 
     public void iniciarSesion(Usuario usuario){
-        if(!usuario.isConectado()){
+        if(!usuario.isConectado() && !usuario.isSancion()){
             usuario.setConectado(true);
             for(String forosUpdate: foroActualizado){
                 System.out.println("el foro "+forosUpdate+" tiene nuevas entradas");

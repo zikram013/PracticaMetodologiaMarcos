@@ -32,18 +32,20 @@ public class Verificar {
     }
 
     public void verificacion(String aprobacion,EntradaAbstracta entradaAbstracta,Usuario usuario){
-        if(usuario.isConectado() && usuario.getRol().equals("admin")){
+        if(usuario.isConectado() && managerUsuario.encontradoRolAdmin(usuario)){
             if(!entradasPendienteDeVerificar.isEmpty()){
                 for(EntradaReal verified: entradasPendienteDeVerificar){
                     if(verified.equals(entradaAbstracta)){
                         if(aprobacion.equals("A")){
                             verified.setValidacion(true);
                             verified.getSubForo().crearEntrada(verified);
+                           //eliminar(verified);
                         }else if(aprobacion.equals("D")){
                             verified.setValidacion(true);
                             verified.getCreador().setSancion(true);
-                            //entradasPendienteDeVerificar.remove(verified);
+
                         }
+                        //eliminar(verified);
 
                     }
                 }
@@ -56,7 +58,7 @@ public class Verificar {
     }
 
     public void mostrarEntradasParaVerificar(Usuario usuario){
-        if(usuario.getRol().equals("admin")){
+        if(managerUsuario.encontradoRolAdmin(usuario)){
             if(!entradasPendienteDeVerificar.isEmpty()){
                 for(EntradaReal verifies:entradasPendienteDeVerificar){
                     System.out.println(verifies);
@@ -71,7 +73,9 @@ public class Verificar {
 
     public void eliminar(EntradaAbstracta entradaAbstracta){
         if(!entradasPendienteDeVerificar.isEmpty()) {
-            entradasPendienteDeVerificar.removeIf(er -> er.equals(entradaAbstracta));
+            if(entradaAbstracta.isValidacion()){
+                entradasPendienteDeVerificar.removeIf(er -> er.equals(entradaAbstracta));
+            }
         }else{
             System.out.println("no hay entradas para eliminar");
         }
