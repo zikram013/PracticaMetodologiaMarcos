@@ -170,7 +170,6 @@ public class SubForo implements SujetoObservable{
         for(Observador chivato:chivatos){
            chivato.update(tituloSubForo);
         }
-        System.out.println("chivame");
     }
 
     @Override

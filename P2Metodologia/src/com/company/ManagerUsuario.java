@@ -52,6 +52,15 @@ public class ManagerUsuario implements Observador {
         }
         return false;
     }
+
+    public boolean encontradoRolAdmin(Usuario buscarUsuario){
+        for(Usuario usuario:listaDeUsuarios){
+            if(usuario.equals(buscarUsuario)){
+                return true;
+            }
+        }
+        return false;
+    }
 /*
     public boolean encontradoRolAlumno(String correo,String password){
         System.out.println("Realizando busqueda");
@@ -83,37 +92,6 @@ public class ManagerUsuario implements Observador {
         }
         return null;
     }
-/*
-    public void mostrarLasSucripciones(String correo,String password){
-        for (Usuario usuario:listaDeUsuarios){
-            if(usuario.getCorreo().equals(correo)&& usuario.getContraseña().equals(password)){
-                for(SubForo suscripcion: usuario.getSuscripcionForos()){
-                    System.out.println(suscripcion.getTituloSubForo());
-                }
-
-            }
-        }
-    }
-
-    public boolean inscripcion(SubForo subForo,Usuario usuario){
-        if(usuario.getSuscripcionForos().isEmpty()){
-            usuario.getSuscripcionForos().add(subForo);
-            System.out.println("Usted se ha inscrito en este foro "+subForo.getTituloSubForo());
-            return true;
-        }else{
-            for(SubForo suscripcion:usuario.getSuscripcionForos()){
-                if(suscripcion.getTituloSubForo().equals(subForo.getTituloSubForo())){
-                    System.out.println("Ya esta añadido");
-                    return false;
-                }else{
-                    System.out.println("Se añade");
-                    usuario.getSuscripcionForos().add(subForo);
-                    return true;
-                }
-            }
-        }
-        return false;
-    }*/
 
     public void iniciarSesion(Usuario usuario){
         if(!usuario.isConectado()){
@@ -125,7 +103,7 @@ public class ManagerUsuario implements Observador {
             usuario.setConectado(false);
             System.out.println("este usuario esta desconectado");
         }
-        System.out.println(usuario.isConectado());
+       // System.out.println(usuario.isConectado());
     }
 
     public void desconectar(Usuario usuario){

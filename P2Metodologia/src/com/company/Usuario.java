@@ -30,6 +30,7 @@ public class Usuario  {
         this.rol=rol;
         this.managerUsuario=managerUsuario;
         this.conectado=false;
+        this.sancion=false;
        // this.suscripcionForos= new HashSet<SubForo>();
     }
 
@@ -44,6 +45,14 @@ public class Usuario  {
     public void setSuscripcionForos(HashSet<SubForo> suscripcionForos) {
         this.suscripcionForos = suscripcionForos;
     }*/
+
+    public boolean isSancion() {
+        return sancion;
+    }
+
+    public void setSancion(boolean sancion) {
+        this.sancion = sancion;
+    }
 
     public String getRol() {
         return rol;

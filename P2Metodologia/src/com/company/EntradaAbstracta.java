@@ -11,6 +11,7 @@ public abstract class EntradaAbstracta {
     private int valoracionNegativa;
     private ArrayList<Usuario>usuarioHaVotado;
     private Usuario creador;
+    private boolean validacion;
 
     public EntradaAbstracta(String tituloEntrada, SubForo subForo, Usuario creador) {
         this.tituloEntrada = tituloEntrada;
@@ -20,8 +21,16 @@ public abstract class EntradaAbstracta {
         this.valoracionNegativa = 0;
         this.subForo=subForo;
         this.creador=creador;
+        this.validacion=false;
     }
 
+    public boolean isValidacion() {
+        return validacion;
+    }
+
+    public void setValidacion(boolean validacion) {
+        this.validacion = validacion;
+    }
 
     public Usuario getCreador() {
         return creador;

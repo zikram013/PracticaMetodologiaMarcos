@@ -7,11 +7,13 @@ public class Main {
         ManagerUsuario managerUsuario=new ManagerUsuario();
         ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
 
+        Verificar verificar=new Verificar(managerUsuario,managerSubForos);
 
         //Se crean los usuarios
         System.out.println("Se crean los usuarios");
         Usuario usuario=new Usuario("marcos","sanchez","zikram","hola","pass","profesor");
         Usuario usuario1=new Usuario("miguel","ruiz","yoshiki","yoshiki","verboten","alumno");
+        Usuario admin=new Usuario("admin","admin","admin","admin","admin","admin");
         managerUsuario.crearUsuario(usuario);
         managerUsuario.crearUsuario(usuario1);
         //iniciamos sesion
@@ -27,22 +29,30 @@ public class Main {
         EntradaReal entradaReal=new EntradaReal("Hola",foro,usuario);
         entradaReal.agregar(new Encuesta(entradaReal.tituloEntrada,foro,usuario,"pfff"));
         entradaReal.agregar(new Ejercicios(entradaReal.tituloEntrada,foro,usuario,"suspenspo"));
-        foro.crearEntrada(entradaReal);
+        verificar.entradasParaValidar(entradaReal);
+       // foro.crearEntrada(entradaReal);
 
         managerUsuario.desconectar(usuario);
 
-        managerUsuario.iniciarSesion(usuario1);
+        managerUsuario.iniciarSesion(admin);
+        verificar.mostrarEntradasParaVerificar(admin);
+        verificar.verificacion("D",entradaReal,admin);
+        verificar.eliminar(entradaReal);
+        verificar.eliminar(entradaReal);
+        managerUsuario.desconectar(admin);
+
+        System.out.println("el usuario "+usuario.getRol()+" esta sancionado " +usuario.isSancion());
 
       //  EntradaReal entradaReal1=new EntradaReal("SegundaPrueba",foro2,usuario1);
       //  entradaReal1.agregar(new Texto(entradaReal1.tituloEntrada,foro,usuario1,"hola hola"));
        // foro2.crearEntrada(entradaReal1);
 
 
-        managerUsuario.iniciarSesion(usuario);
+       // managerUsuario.iniciarSesion(usuario);
 
 
 
-        foro.listarEntrada(foro.getTituloSubForo());
+        //foro.listarEntrada(foro.getTituloSubForo());
 
 
 
