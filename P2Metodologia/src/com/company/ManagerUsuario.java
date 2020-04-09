@@ -1,9 +1,13 @@
 package com.company;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class ManagerUsuario implements Observador {
+public class ManagerUsuario implements Observador, Serializable {
 
     private HashSet<Usuario> listaDeUsuarios;
    private ArrayList<String>foroActualizado;
@@ -119,4 +123,27 @@ public class ManagerUsuario implements Observador {
         foroActualizado.add(s);
     }
 
+
+    @Override
+    public String toString() {
+        StringBuilder infoUsuarios= new StringBuilder("Los usuarios registrados son: \n");
+        for(Usuario usuario:listaDeUsuarios){
+           infoUsuarios.append("\t").append(usuario.toString()).append("\n");
+        }
+        return infoUsuarios.toString();
+    }
+
+    public boolean guardarInfoUsuarios(){
+        try{
+            FileOutputStream fos=new FileOutputStream("BaseDeDatosUsuarios.obj");
+            ObjectOutputStream oos=new ObjectOutputStream(fos);
+            oos.writeObject(this);
+            oos.close();
+            fos.close();
+            return true;
+        }catch (IOException ioe){
+            System.out.println(ioe.getMessage());
+            return false;
+        }
+    }
 }

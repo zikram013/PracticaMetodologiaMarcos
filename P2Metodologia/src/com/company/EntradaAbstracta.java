@@ -1,8 +1,9 @@
 package com.company;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public abstract class EntradaAbstracta {
+public abstract class EntradaAbstracta implements Serializable {
 
     private SubForo subForo;
     protected String tituloEntrada;
@@ -133,4 +134,6 @@ public abstract class EntradaAbstracta {
         }
 
     }
+
+
 }

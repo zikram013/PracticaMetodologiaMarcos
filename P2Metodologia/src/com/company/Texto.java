@@ -1,6 +1,8 @@
 package com.company;
 
-public class Texto extends EntradaAbstracta {
+import java.io.Serializable;
+
+public class Texto extends EntradaAbstracta implements Serializable {
 
     private String texto;
 

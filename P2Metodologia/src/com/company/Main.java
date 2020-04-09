@@ -14,9 +14,12 @@ public class Main {
         Usuario usuario=new Usuario("marcos","sanchez","zikram","hola","pass","profesor");
         Usuario usuario1=new Usuario("miguel","ruiz","yoshiki","yoshiki","verboten","alumno");
         Usuario admin=new Usuario("admin","admin","admin","admin","admin","admin");
+        Usuario usuario2=new Usuario("Camila","Costanzo","cami","cami","cami","alumno");
         managerUsuario.crearUsuario(usuario);
         managerUsuario.crearUsuario(usuario1);
+        managerUsuario.crearUsuario(usuario2);
         managerUsuario.crearUsuario(admin);
+        managerUsuario.guardarInfoUsuarios();
         //iniciamos sesion
         managerUsuario.iniciarSesion(usuario);
         //Creamos subforos
@@ -28,70 +31,35 @@ public class Main {
         managerSubForos.mostrarLasSucripciones(foro);
         //Creamos entrada uno
         EntradaReal entradaReal=new EntradaReal("Hola",foro,usuario);
-        entradaReal.agregar(new Encuesta(entradaReal.tituloEntrada,foro,usuario,"pfff"));
-        entradaReal.agregar(new Ejercicios(entradaReal.tituloEntrada,foro,usuario,"suspenspo"));
+        entradaReal.agregar(new Encuesta(entradaReal.getTituloEntrada(),foro,usuario,"pfff"));
+        entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),foro,usuario,"suspenspo"));
         verificar.entradasParaValidar(entradaReal);
-       // foro.crearEntrada(entradaReal);
-
         managerUsuario.desconectar(usuario);
 
 
         managerUsuario.iniciarSesion(admin);
         verificar.mostrarEntradasParaVerificar(admin);
-        verificar.verificacion("D",entradaReal,admin);
+        verificar.verificacion("A",entradaReal,admin);
         verificar.eliminar(entradaReal);
-        //verificar.eliminar(entradaReal);
         managerUsuario.desconectar(admin);
 
         System.out.println("el usuario "+usuario.getRol()+" esta sancionado " +usuario.isSancion());
 
-      //  EntradaReal entradaReal1=new EntradaReal("SegundaPrueba",foro2,usuario1);
-      //  entradaReal1.agregar(new Texto(entradaReal1.tituloEntrada,foro,usuario1,"hola hola"));
-       // foro2.crearEntrada(entradaReal1);
+        managerUsuario.iniciarSesion(usuario1);
+        EntradaReal entradaReal1=new EntradaReal("SegundaPrueba",foro2,usuario1);
+        entradaReal1.agregar(new Texto(entradaReal1.tituloEntrada,foro,usuario1,"hola hola"));
+       managerUsuario.desconectar(usuario1);
+
+        managerUsuario.iniciarSesion(admin);
+        verificar.mostrarEntradasParaVerificar(admin);
+        verificar.verificacion("A",entradaReal1,admin);
+        verificar.eliminar(entradaReal1);
+        managerUsuario.desconectar(admin);
 
 
-       // managerUsuario.iniciarSesion(usuario);
-
-
-
-        //foro.listarEntrada(foro.getTituloSubForo());
-
-
-
-
-        //desconecto
-        //managerUsuario.iniciarSesion(usuario);
-
-      //  System.out.println("Los listamos");
-        //managerSubForos.mostrarSubForo();
-
-
-
-
-      //  foro.listarEntrada(foro.getTituloSubForo());
-      //  foro2.listarEntrada(foro2.getTituloSubForo());
-
-
-       // System.out.println("Vamos a suscribir");
-        //conecto
-      //  managerUsuario.iniciarSesion(usuario);
-     //   managerSubForos.inscripcion(foro,usuario);
-     //   //desconectar
-     //  managerUsuario.desconectar(usuario);
-
-      /*  managerSubForos.inscripcion(foro,usuario1);
-        managerSubForos.inscripcion(foro2,usuario1);
-        System.out.println("Vamos a ver esas suscripciones");
-        managerSubForos.mostrarLasSucripciones(foro);
-        managerSubForos.mostrarLasSucripciones(foro2);
-
-        //conecto
+        //Comentarios y votaciones
         managerUsuario.iniciarSesion(usuario);
-        System.out.println("Es true inicia sesion");
 
-        System.out.println("Momento dificil: Comprobar si funciona el patron composite");
-
-        System.out.println("Vamos a añadir un comentario a esa entrada");
         Comentarios comentario=new Comentarios("Ha funcionado el patron");
         entradaReal.crearComentario(comentario);
         entradaReal.mostrarComentarios(entradaReal.getTituloEntrada());
@@ -99,15 +67,14 @@ public class Main {
         Comentarios comentario1=new Comentarios("mas pruebas");
         entradaReal1.crearComentario(comentario1);
         entradaReal1.mostrarComentarios(entradaReal1.getTituloEntrada());
-
-
         managerUsuario.desconectar(usuario);
-        System.out.println("cierra sesion");
 
-       //conecto
-        managerUsuario.iniciarSesion(usuario);
+        managerUsuario.iniciarSesion(usuario2);
+        foro.votarEntrada(usuario2,entradaReal.getTituloEntrada(),foro.getTituloSubForo(),"P");
+        foro.listarEntrada(foro.getTituloSubForo());
+        managerUsuario.desconectar(usuario2);
 
+        managerSubForos.guardarInfoForos();
 
-*/
     }
 }

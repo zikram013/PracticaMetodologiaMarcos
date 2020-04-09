@@ -1,9 +1,13 @@
 package com.company;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class ManagerSubForos implements Observador {
+public class ManagerSubForos implements Observador, Serializable {
 
     private SubForo subForo=new SubForo();
     private Usuario usuario=new Usuario();
@@ -135,4 +139,33 @@ public class ManagerSubForos implements Observador {
           }
       }
     }
+
+    public String toString(){
+        StringBuilder infoForos= new StringBuilder();
+        for(SubForo foro:listadoDeForos){
+            infoForos.append("El foro: ").append(foro.toString()).append("\n");
+            for(EntradaReal entradaReal:subForo.getEntry()){
+                infoForos.append("\t").append(entradaReal.toString());
+                for(Comentarios comentarios:entradaReal.getComentar()){
+                    infoForos.append("\t").append(comentarios.toString());
+                }
+            }
+        }
+        return infoForos.toString();
+    }
+
+    public boolean guardarInfoForos(){
+        try{
+            FileOutputStream fos=new FileOutputStream("BaseDeDatosForos.obj");
+            ObjectOutputStream oos=new ObjectOutputStream(fos);
+            oos.writeObject(this);
+            oos.close();
+            fos.close();
+            return true;
+        }catch (IOException ioe){
+            System.out.println(ioe.getMessage());
+            return false;
+        }
+    }
+
 }

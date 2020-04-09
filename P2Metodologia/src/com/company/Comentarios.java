@@ -1,6 +1,8 @@
 package com.company;
 
-public class Comentarios {
+import java.io.Serializable;
+
+public class Comentarios implements Serializable {
 
     private String comentario;
 

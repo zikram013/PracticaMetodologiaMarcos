@@ -1,10 +1,11 @@
 package com.company;
 
+import java.io.Serializable;
 import java.sql.PseudoColumnUsage;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Usuario  {
+public class Usuario implements Serializable {
 
     //Declaracion de variables
     private ManagerUsuario managerUsuario;
@@ -117,14 +118,15 @@ public class Usuario  {
     @Override
     public String toString() {
         return "Usuario{" +
-                "nombre='" + nombre + '\'' +
+                "managerUsuario=" + managerUsuario +
+                ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", nick='" + nick + '\'' +
                 ", correo='" + correo + '\'' +
                 ", contraseña='" + contraseña + '\'' +
                 ", rol='" + rol + '\'' +
+                ", conectado=" + conectado +
+                ", sancion=" + sancion +
                 '}';
     }
-
-
 }

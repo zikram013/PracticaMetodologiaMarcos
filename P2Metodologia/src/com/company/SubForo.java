@@ -3,10 +3,11 @@ package com.company;
 import org.w3c.dom.ls.LSOutput;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class SubForo implements SujetoObservable{
+public class SubForo implements SujetoObservable, Serializable {
 
     private ArrayList<Observador>chivatos;
     private ManagerSubForos managerSubForos;
@@ -15,7 +16,6 @@ public class SubForo implements SujetoObservable{
     private HashSet<EntradaReal>entry;
     private Texto text;
     private static final SubForo INSTANCIASUBFORO=new SubForo();
-    private Escaner escaner;
     private HashSet<Usuario>usuariosSuscritos;
 
 
@@ -26,7 +26,6 @@ public class SubForo implements SujetoObservable{
         this.textito = new HashSet<Texto>();
         this.managerSubForos=managerSubForos;
         this.entry=new HashSet<EntradaReal>();
-        this.escaner=new Escaner();
         this.usuariosSuscritos=new HashSet<Usuario>();
         this.chivatos=new ArrayList<>();
     }
@@ -100,7 +99,9 @@ public class SubForo implements SujetoObservable{
                 for (EntradaReal entradaReal : entry) {
                     if (!(entry.isEmpty())){
                        // System.out.println("\n" + entradaAbstracta.getTituloEntrada() +" " + +" "+"Positivo "+ entradaAbstracta.getValoracionPositiva()+" "+ "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
-                        System.out.println(entradaReal.toString());
+                        //System.out.println(entradaReal.toString());
+                        System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+
                     }else{
                         System.out.println("No tiene entradas");
                     }
@@ -127,29 +128,32 @@ public class SubForo implements SujetoObservable{
             for(SubForo subForo: managerSubForos.getListadoDeForos()){
                 if(subForo.getTituloSubForo().equals(tituloSubForo)) {
                     System.out.println("listado de entradas");
-                    for (EntradaAbstracta entradaAbstracta : entry) {
+                    for (EntradaReal entradaReal : entry) {
                         if (!(entry.isEmpty())) {
-                            System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
-                            if (entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)) {
-                                if((entradaAbstracta.getUsuarioHaVotado().isEmpty()) || (!(entradaAbstracta.getUsuarioHaVotado().contains(user)))) {
+                            System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                            if (entradaReal.getTituloEntrada().equals(tituloDeLaEntrada)) {
+                                if((entradaReal.getUsuarioHaVotado().isEmpty()) || (!(entradaReal.getUsuarioHaVotado().contains(user)))) {
                                     System.out.println("Valorar P-positivo N-Negativo");
                                     do {
                                         switch (letra) {
                                             case "P":
-                                                entradaAbstracta.getUsuarioHaVotado().add(user);
+                                                entradaReal.getUsuarioHaVotado().add(user);
                                                 int contadorPositivo;
-                                                contadorPositivo = entradaAbstracta.getValoracionPositiva();
+                                                contadorPositivo = entradaReal.getValoracionPositiva();
                                                 contadorPositivo++;
-                                                entradaAbstracta.setValoracionPositiva(contadorPositivo);
-                                                System.out.println("\n" + entradaAbstracta.getTituloEntrada() +  " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                                                entradaReal.setValoracionPositiva(contadorPositivo);
+                                              //  System.out.println("\n" + entradaReal.getTituloEntrada() +  " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                                                //System.out.println(entradaReal.toString());
+                                                System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+
                                                 break;
                                             case "N":
-                                                entradaAbstracta.getUsuarioHaVotado().add(user);
+                                                entradaReal.getUsuarioHaVotado().add(user);
                                                 int contadorNegativo;
-                                                contadorNegativo = entradaAbstracta.getValoracionNegativa();
+                                                contadorNegativo = entradaReal.getValoracionNegativa();
                                                 contadorNegativo++;
-                                                entradaAbstracta.setValoracionNegativa(contadorNegativo);
-                                                System.out.println("\n" + entradaAbstracta.getTituloEntrada() + " " + "Positivo " + entradaAbstracta.getValoracionPositiva() + " " + "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
+                                                entradaReal.setValoracionNegativa(contadorNegativo);
+                                                System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
                                                 break;
                                         }
                                     } while (letra.equals("S"));
@@ -187,5 +191,14 @@ public class SubForo implements SujetoObservable{
     public void deleteObserver(Observador observador) {
         chivatos.remove(observador);
 
+    }
+
+    @Override
+    public String toString() {
+        return "SubForo{" +
+                "tituloSubForo='" + tituloSubForo + '\'' +
+                ", entry=" + entry +
+                ", usuariosSuscritos=" + usuariosSuscritos +
+                '}';
     }
 }

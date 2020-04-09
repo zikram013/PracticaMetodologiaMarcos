@@ -1,6 +1,8 @@
 package com.company;
 
-public class Encuesta extends EntradaAbstracta {
+import java.io.Serializable;
+
+public class Encuesta extends EntradaAbstracta implements Serializable {
 
     private String cuestionario;
 
