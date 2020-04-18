@@ -1,13 +1,54 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        ManagerUsuario managerUsuario=ManagerUsuario.leerInfo();
-        managerUsuario.listarUsuarios();
-        ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
+        ManagerUsuario managerUsuario=ManagerUsuario.leerInfoUsuarios();
+        ManagerSubForos managerSubForos=ManagerSubForos.leerInfoForos();
 
+        ArrayList<Usuario>listado=new ArrayList<>(managerUsuario.getListaDeUsuarios());
+        ArrayList<SubForo>listaDeForos=new ArrayList<>(managerSubForos.getListadoDeForos());
+
+        if(listado.size() <= 0){
+            System.out.println("no hay usuarios");
+        }else{
+            System.out.println("El numero de usuarios registrados es: "+listado.size());
+            managerUsuario.listarUsuarios();
+        }
+        System.out.println("El administrador es" +listado.get(3).toString());
+
+        if(listaDeForos.size()<=0){
+            System.out.println("no hay foros");
+        }else{
+            System.out.println("el numero de foros es: "+listaDeForos.size());
+            managerSubForos.mostrarSubForo();
+        }
+        managerSubForos.mostrarLasSucripciones(listaDeForos.get(0));
+        listaDeForos.get(0).listarEntrada(listaDeForos.get(0).getTituloSubForo());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //SubForo subForo=new SubForo("Dejame pasar",managerSubForos);
         Verificar verificar=new Verificar(managerUsuario,managerSubForos);
 /*
 

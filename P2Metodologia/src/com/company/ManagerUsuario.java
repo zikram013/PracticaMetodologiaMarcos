@@ -150,7 +150,7 @@ public class ManagerUsuario implements Observador, Serializable {
         }
     }
 
-    public static ManagerUsuario leerInfo(){
+    public static ManagerUsuario leerInfoUsuarios(){
         ManagerUsuario u = null;
         try {
             FileInputStream file =new FileInputStream("BaseDeDatosUsuarios.obj");

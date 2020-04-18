@@ -98,9 +98,10 @@ public class SubForo implements SujetoObservable, Serializable {
                 System.out.println("listado de entradas");
                 for (EntradaReal entradaReal : entry) {
                     if (!(entry.isEmpty())){
-                       // System.out.println("\n" + entradaAbstracta.getTituloEntrada() +" " + +" "+"Positivo "+ entradaAbstracta.getValoracionPositiva()+" "+ "Negativo " + entradaAbstracta.getValoracionNegativa()+" Escrito por: "+ entradaAbstracta.getCreador().getNick());
-                        //System.out.println(entradaReal.toString());
-                        System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                       // System.out.println("\n" + entradaReal.getTituloEntrada() +" " +" "+"Positivo "+ entradaReal.getValoracionPositiva()+" "+ "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                        System.out.println(entradaReal.toString());
+                        entradaReal.mostrarComentarios(entradaReal.getTituloEntrada());
+                      //  System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
 
                     }else{
                         System.out.println("No tiene entradas");

@@ -96,6 +96,7 @@ public abstract class EntradaAbstracta implements Serializable {
                 ", valoracionPositiva=" + valoracionPositiva +
                 ", valoracionNegativa=" + valoracionNegativa +
                 ", creador=" + creador.getNick() +
+
                 '}';
     }
 
@@ -120,12 +121,13 @@ public abstract class EntradaAbstracta implements Serializable {
         return false;
     }
 
-    public void mostrarComentarios(String nombreEntrada){
+    public  void mostrarComentarios(String nombreEntrada){
         for(EntradaAbstracta entradaAbstracta :subForo.getEntry()){
             if (entradaAbstracta.getTituloEntrada().equals(nombreEntrada)){
                 for(Comentarios comentarios:comentar){
                     if(!(comentar.isEmpty())){
                         System.out.println("\n" + comentarios.getComentario());
+
                     }else{
                         System.out.println("no tiene comentarios");
                     }

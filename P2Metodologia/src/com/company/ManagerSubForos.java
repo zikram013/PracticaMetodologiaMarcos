@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -22,6 +19,9 @@ public class ManagerSubForos implements Observador, Serializable {
         this.usuarios=new ArrayList<Usuario>();
         this.entradaAbstractas =new HashSet<EntradaAbstracta>();
         this.managerUsuario=managerUsuario;
+    }
+    public ManagerSubForos(){
+
     }
 
     public HashSet<EntradaAbstracta> getEntradaAbstractas() {
@@ -49,9 +49,12 @@ public class ManagerSubForos implements Observador, Serializable {
     }
 
     public  void mostrarSubForo() {
-        //Crear la mostrar
-        for (SubForo listadoDeForo : this.listadoDeForos) {
-            System.out.println("\n" + listadoDeForo.getTituloSubForo());
+        if(!listadoDeForos.isEmpty()){
+            for (SubForo listadoDeForo : this.listadoDeForos) {
+                System.out.println("\n" + listadoDeForo.getTituloSubForo());
+            }
+        }else{
+            System.out.println("no hay foros para mostrar");
         }
     }
 
@@ -166,6 +169,22 @@ public class ManagerSubForos implements Observador, Serializable {
             System.out.println(ioe.getMessage());
             return false;
         }
+    }
+
+    public static ManagerSubForos leerInfoForos(){
+        ManagerSubForos su = null;
+        try {
+            FileInputStream file =new FileInputStream("BaseDeDatosForos.obj");
+            ObjectInputStream inputFile = new ObjectInputStream(file);
+            su = (ManagerSubForos) inputFile.readObject();
+
+            inputFile.close();
+            file.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.exit(-1);
+        }
+        return su;
     }
 
 }
