@@ -3,7 +3,7 @@ package com.company;
 import java.io.Serializable;
 
 public class Ejercicios extends EntradaAbstracta implements Serializable {
-
+    private static final long serialVersionUID = 1L;
     private String preguntasEjercicios;
 
     public Ejercicios(String tituloEntrada, SubForo subForo, Usuario creador, String preguntasEjercicios) {

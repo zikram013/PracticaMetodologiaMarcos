@@ -19,7 +19,7 @@ public class Usuario implements Serializable {
     private boolean sancion;
     //private HashSet<SubForo>suscripcionForos;
     private static final Usuario INSTANCIAUSUARIO=new Usuario();
-
+    private static final long serialVersionUID = 1L;
     //Constructor,getters and setters
 
     public Usuario(String nombre, String apellido, String nick, String correo, String contraseña,String rol) {
@@ -29,7 +29,6 @@ public class Usuario implements Serializable {
         this.correo = correo;
         this.contraseña = contraseña;
         this.rol=rol;
-        this.managerUsuario=managerUsuario;
         this.conectado=false;
         this.sancion=false;
        // this.suscripcionForos= new HashSet<SubForo>();

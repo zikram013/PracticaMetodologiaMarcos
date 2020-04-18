@@ -3,7 +3,7 @@ package com.company;
 import java.io.Serializable;
 
 public class Encuesta extends EntradaAbstracta implements Serializable {
-
+    private static final long serialVersionUID = 1L;
     private String cuestionario;
 
     public Encuesta(String tituloEntrada, SubForo subForo, Usuario creador, String cuestionario) {

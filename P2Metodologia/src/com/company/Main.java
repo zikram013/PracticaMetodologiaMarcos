@@ -3,13 +3,14 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        ManagerUsuario managerUsuario=new ManagerUsuario();
+
+        ManagerUsuario managerUsuario=ManagerUsuario.leerInfo();
+        managerUsuario.listarUsuarios();
         ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
 
         Verificar verificar=new Verificar(managerUsuario,managerSubForos);
+/*
 
-        //Se crean los usuarios
         System.out.println("Se crean los usuarios");
         Usuario usuario=new Usuario("marcos","sanchez","zikram","hola","pass","profesor");
         Usuario usuario1=new Usuario("miguel","ruiz","yoshiki","yoshiki","verboten","alumno");
@@ -20,16 +21,16 @@ public class Main {
         managerUsuario.crearUsuario(usuario2);
         managerUsuario.crearUsuario(admin);
         managerUsuario.guardarInfoUsuarios();
-        //iniciamos sesion
+
         managerUsuario.iniciarSesion(usuario);
-        //Creamos subforos
+
         SubForo foro=new SubForo("Prueba",managerSubForos);
         SubForo foro2=new SubForo("Prueba2",managerSubForos);
         managerSubForos.crearSubforos(foro,usuario);
-        //managerSubForos.crearSubforos(foro2,usuario);
+
         managerSubForos.inscripcion(foro,usuario);
         managerSubForos.mostrarLasSucripciones(foro);
-        //Creamos entrada uno
+
         EntradaReal entradaReal=new EntradaReal("Hola",foro,usuario);
         entradaReal.agregar(new Encuesta(entradaReal.getTituloEntrada(),foro,usuario,"pfff"));
         entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),foro,usuario,"suspenspo"));
@@ -57,7 +58,7 @@ public class Main {
         managerUsuario.desconectar(admin);
 
 
-        //Comentarios y votaciones
+
         managerUsuario.iniciarSesion(usuario);
 
         Comentarios comentario=new Comentarios("Ha funcionado el patron");
@@ -75,6 +76,9 @@ public class Main {
         managerUsuario.desconectar(usuario2);
 
         managerSubForos.guardarInfoForos();
+*/
+
 
     }
+
 }

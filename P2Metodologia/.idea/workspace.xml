@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BaseDeDatosForos.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/BaseDeDatosUsuarios.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDeDatosForos.obj" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDatosForos.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Comentarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Comentarios.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Ejercicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Ejercicios.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Encuesta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Encuesta.class" afterDir="false" />
@@ -16,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/SubForo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/SubForo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Texto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Texto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Verificar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Verificar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Comentarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Comentarios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Ejercicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Ejercicios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Encuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Encuesta.java" afterDir="false" />
@@ -142,26 +140,26 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585646644640" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1876" height="263" key="GridCell.Tab.0.bottom" timestamp="1586453120451">
+    <state width="1876" height="263" key="GridCell.Tab.0.bottom" timestamp="1587223985321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586453120451" />
-    <state width="1876" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586431027487" />
-    <state width="1876" height="263" key="GridCell.Tab.0.center" timestamp="1586453120451">
+    <state width="1876" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587223985321" />
+    <state width="1876" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
+    <state width="1876" height="263" key="GridCell.Tab.0.center" timestamp="1587223985321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586453120451" />
-    <state width="1876" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586431027487" />
-    <state width="1876" height="263" key="GridCell.Tab.0.left" timestamp="1586453120450">
+    <state width="1876" height="263" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587223985321" />
+    <state width="1876" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
+    <state width="1876" height="263" key="GridCell.Tab.0.left" timestamp="1587223985321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586453120450" />
-    <state width="1876" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586431027487" />
-    <state width="1876" height="263" key="GridCell.Tab.0.right" timestamp="1586453120451">
+    <state width="1876" height="263" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587223985321" />
+    <state width="1876" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
+    <state width="1876" height="263" key="GridCell.Tab.0.right" timestamp="1587223985321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586453120451" />
-    <state width="1876" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586431027487" />
+    <state width="1876" height="263" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587223985321" />
+    <state width="1876" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1586185337271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,10 +170,10 @@
     <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1585905523156" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586165712591" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584873464443" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586424177683">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587222258739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586336483727" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587222258739" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586424177683" />
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585241603937">
       <screen x="0" y="0" width="1920" height="1040" />

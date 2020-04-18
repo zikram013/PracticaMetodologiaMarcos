@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class SubForo implements SujetoObservable, Serializable {
-
+    private static final long serialVersionUID = 1L;
     private ArrayList<Observador>chivatos;
     private ManagerSubForos managerSubForos;
     private String tituloSubForo;

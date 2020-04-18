@@ -1,14 +1,11 @@
 package com.company;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 
 public class ManagerUsuario implements Observador, Serializable {
-
+    private static final long serialVersionUID = 1L;
     private HashSet<Usuario> listaDeUsuarios;
    private ArrayList<String>foroActualizado;
 
@@ -41,9 +38,15 @@ public class ManagerUsuario implements Observador, Serializable {
 
 
     public void listarUsuarios() {
-        for (Usuario listaDeUsuario : this.listaDeUsuarios) {
-            System.out.println("\n" + listaDeUsuario.toString());
+        if(!listaDeUsuarios.isEmpty()){
+            for (Usuario listaDeUsuario : this.listaDeUsuarios) {
+                System.out.println("\n" + listaDeUsuario.toString());
+
+            }
+        }else{
+            System.out.println("No hay usuarios");
         }
+
     }
 
     public  boolean encontradoRolProfesor(Usuario buscarUsuario){
@@ -145,5 +148,21 @@ public class ManagerUsuario implements Observador, Serializable {
             System.out.println(ioe.getMessage());
             return false;
         }
+    }
+
+    public static ManagerUsuario leerInfo(){
+        ManagerUsuario u = null;
+        try {
+            FileInputStream file =new FileInputStream("BaseDeDatosUsuarios.obj");
+            ObjectInputStream inputFile = new ObjectInputStream(file);
+            u = (ManagerUsuario) inputFile.readObject();
+
+            inputFile.close();
+            file.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.exit(-1);
+        }
+        return u;
     }
 }

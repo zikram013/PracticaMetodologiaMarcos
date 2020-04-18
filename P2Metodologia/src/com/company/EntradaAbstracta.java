@@ -13,7 +13,7 @@ public abstract class EntradaAbstracta implements Serializable {
     private ArrayList<Usuario>usuarioHaVotado;
     private Usuario creador;
     private boolean validacion;
-
+    private static final long serialVersionUID = 1L;
     public EntradaAbstracta(String tituloEntrada, SubForo subForo, Usuario creador) {
         this.tituloEntrada = tituloEntrada;
         this.comentar = new ArrayList<Comentarios>();

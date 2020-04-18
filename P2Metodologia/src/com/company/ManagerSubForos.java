@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class ManagerSubForos implements Observador, Serializable {
-
+    private static final long serialVersionUID = 1L;
     private SubForo subForo=new SubForo();
     private Usuario usuario=new Usuario();
     private HashSet<String> foro;

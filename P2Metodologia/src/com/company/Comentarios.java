@@ -3,7 +3,7 @@ package com.company;
 import java.io.Serializable;
 
 public class Comentarios implements Serializable {
-
+    private static final long serialVersionUID = 1L;
     private String comentario;
 
     public Comentarios(String comentario) {
