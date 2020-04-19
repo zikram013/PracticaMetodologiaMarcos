@@ -7,9 +7,11 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-
+/*
         ManagerUsuario managerUsuario=ManagerUsuario.leerInfoUsuarios();
-        ManagerSubForos managerSubForos=ManagerSubForos.leerInfoForos();
+        new ManagerSubForos(managerUsuario);
+        ManagerSubForos managerSubForos= ManagerSubForos.leerInfoForos();
+
 
         ArrayList<Usuario>listado=new ArrayList<>(managerUsuario.getListaDeUsuarios());
         ArrayList<SubForo>listaDeForos=new ArrayList<>(managerSubForos.getListadoDeForos());
@@ -31,6 +33,11 @@ public class Main {
         managerSubForos.mostrarLasSucripciones(listaDeForos.get(0));
         listaDeForos.get(0).listarEntrada(listaDeForos.get(0).getTituloSubForo());
 
+        managerUsuario.iniciarSesion(listado.get(0));
+        SubForo foro=new SubForo("Metodlogia",managerSubForos);
+        managerSubForos.crearSubforos(foro,listado.get(0));
+        managerUsuario.desconectar(listado.get(0));
+        managerSubForos.mostrarSubForo();*/
 
 
 
@@ -49,8 +56,10 @@ public class Main {
 
 
         //SubForo subForo=new SubForo("Dejame pasar",managerSubForos);
+        ManagerUsuario managerUsuario=new ManagerUsuario();
+        ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
         Verificar verificar=new Verificar(managerUsuario,managerSubForos);
-/*
+
 
         System.out.println("Se crean los usuarios");
         Usuario usuario=new Usuario("marcos","sanchez","zikram","hola","pass","profesor");
@@ -117,7 +126,7 @@ public class Main {
         managerUsuario.desconectar(usuario2);
 
         managerSubForos.guardarInfoForos();
-*/
+
 
 
     }

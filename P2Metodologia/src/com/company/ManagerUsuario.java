@@ -102,6 +102,7 @@ public class ManagerUsuario implements Observador, Serializable {
     public void iniciarSesion(Usuario usuario){
         if(!usuario.isConectado() && !usuario.isSancion()){
             usuario.setConectado(true);
+            System.out.println("Bienvenido: "+usuario.getNombre()+" "+usuario.getApellido());
             for(String forosUpdate: foroActualizado){
                 System.out.println("el foro "+forosUpdate+" tiene nuevas entradas");
             }
@@ -114,6 +115,7 @@ public class ManagerUsuario implements Observador, Serializable {
 
     public void desconectar(Usuario usuario){
         if(usuario.isConectado()) {
+            System.out.println("Adios: "+usuario.getNombre()+" "+usuario.getApellido());
             usuario.setConectado(false);
         }
     }
