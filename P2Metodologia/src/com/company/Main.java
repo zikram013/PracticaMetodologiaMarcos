@@ -1,8 +1,15 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import com.company.Comentarios.Comentarios;
+import com.company.Entradas.Ejercicios;
+import com.company.Entradas.Encuesta;
+import com.company.Entradas.EntradaReal;
+import com.company.Entradas.Texto;
+import com.company.SubForos.ManagerSubForos;
+import com.company.SubForos.SubForo;
+import com.company.Users.ManagerUsuario;
+import com.company.Users.Usuario;
+import com.company.Verificar.Verificar;
 
 public class Main {
 

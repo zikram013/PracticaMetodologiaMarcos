@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.Comentarios.Comentarios;
+import com.company.SubForos.SubForo;
+import com.company.Users.Usuario;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
