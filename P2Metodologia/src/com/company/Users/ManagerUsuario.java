@@ -101,18 +101,27 @@ public class ManagerUsuario implements Observador, Serializable {
         return null;
     }
 
-    public void iniciarSesion(Usuario usuario){
-        if(!usuario.isConectado() && !usuario.isSancion()){
-            usuario.setConectado(true);
-            System.out.println("Bienvenido: "+usuario.getNombre()+" "+usuario.getApellido());
-            for(String forosUpdate: foroActualizado){
-                System.out.println("el foro "+forosUpdate+" tiene nuevas entradas");
+    public void iniciarSesion(String correo,String password){
+        boolean encontrado=false;
+        for(Usuario usuario:listaDeUsuarios) {
+            if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)) {
+                if (!usuario.isConectado() && !usuario.isSancion()) {
+                    encontrado=true;
+                    usuario.setConectado(true);
+                    System.out.println("Bienvenido: " + usuario.getNombre() + " " + usuario.getApellido());
+                    for (String forosUpdate : foroActualizado) {
+                        System.out.println("el foro " + forosUpdate + " tiene nuevas entradas");
+                    }
+                } else {
+                    usuario.setConectado(false);
+                    System.out.println("este usuario esta desconectado");
+                }
             }
-        }else{
-            usuario.setConectado(false);
-            System.out.println("este usuario esta desconectado");
         }
-       // System.out.println(usuario.isConectado());
+        if(encontrado==false){
+            System.out.println("No existe");
+            
+        }
     }
 
     public void desconectar(Usuario usuario){
@@ -144,7 +153,8 @@ public class ManagerUsuario implements Observador, Serializable {
         try{
             FileOutputStream fos=new FileOutputStream("BaseDeDatosUsuarios.obj");
             ObjectOutputStream oos=new ObjectOutputStream(fos);
-            oos.writeObject(this);
+            HashSet<Usuario> guardarUsuario = new HashSet<>(listaDeUsuarios);
+            oos.writeObject(guardarUsuario);
             oos.close();
             fos.close();
             return true;
@@ -154,12 +164,12 @@ public class ManagerUsuario implements Observador, Serializable {
         }
     }
 
-    public static ManagerUsuario leerInfoUsuarios(){
-        ManagerUsuario u = null;
+    public static HashSet<Usuario> leerInfoUsuarios(){
+        HashSet<Usuario>usu=new HashSet<>();
         try {
             FileInputStream file =new FileInputStream("BaseDeDatosUsuarios.obj");
             ObjectInputStream inputFile = new ObjectInputStream(file);
-            u = (ManagerUsuario) inputFile.readObject();
+            usu = (HashSet<Usuario>) inputFile.readObject();
 
             inputFile.close();
             file.close();
@@ -167,6 +177,15 @@ public class ManagerUsuario implements Observador, Serializable {
             System.out.println(e.getMessage());
             System.exit(-1);
         }
-        return u;
+        return usu;
+    }
+
+    public Usuario encontradoRolAdministrador() {
+        for (Usuario usuario : listaDeUsuarios) {
+            if (usuario.getRol().equals("admin")) {
+                return usuario;
+            }
+        }
+        return null;
     }
 }

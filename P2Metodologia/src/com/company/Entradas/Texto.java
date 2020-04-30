@@ -25,7 +25,7 @@ public class Texto extends EntradaAbstracta implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString()+" "+texto;
+        return texto;
     }
 
     @Override

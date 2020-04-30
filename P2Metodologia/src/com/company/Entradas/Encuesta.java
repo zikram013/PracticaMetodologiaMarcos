@@ -25,7 +25,7 @@ public class Encuesta extends EntradaAbstracta implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString()+" "+cuestionario;
+        return cuestionario;
     }
 
     @Override

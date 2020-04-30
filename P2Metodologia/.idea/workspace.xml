@@ -2,20 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BaseDeDatosForosV2.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseDeDatosUsuariosV2.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BaseDeDatosUsuarios.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Comentarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Comentarios/Comentarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Ejercicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Encuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/EntradaAbstracta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/EntradaAbstracta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/Ejercicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/Ejercicios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/Encuesta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/Encuesta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/EntradaReal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/EntradaReal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/Texto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Entradas/Texto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/SubForos/ManagerSubForos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/SubForos/ManagerSubForos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/SubForos/SubForo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/SubForos/SubForo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/ManagerUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/ManagerUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/Usuario.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/EntradaAbstracta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EntradaAbstracta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/EntradaReal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ManagerSubForos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/ManagerSubForos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ManagerUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SubForo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Users/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Verificar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Verificar/Verificar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Demostrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/ManagerSubForos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/ManagerSubForos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Users/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Users/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +83,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Demostrador" />
       <module name="Metodologia" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
@@ -105,22 +115,27 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1368" y="178" key="#Notifications" timestamp="1588262130382">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262130382" />
     <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586449926944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586449926944" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1586450292318">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1588272175733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586450292318" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588272175733" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586427965717" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584873152471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584873152471" />
-    <state x="779" y="211" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584874931150">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1141" y="211" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1588261946953">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1141" y="211" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588261946953" />
     <state x="779" y="211" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584874931150" />
     <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587294377457">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -139,40 +154,41 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585646644640" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1876" height="103" key="GridCell.Tab.0.bottom" timestamp="1587294696976">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom" timestamp="1588275789834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="103" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587294696976" />
-    <state width="1876" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
-    <state width="1876" height="103" key="GridCell.Tab.0.center" timestamp="1587294696975">
+    <state width="1877" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588275789834" />
+    <state width="1876" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587324613844" />
+    <state width="1877" height="212" key="GridCell.Tab.0.center" timestamp="1588275789834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="103" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587294696975" />
-    <state width="1876" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
-    <state width="1876" height="103" key="GridCell.Tab.0.left" timestamp="1587294696975">
+    <state width="1877" height="212" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588275789834" />
+    <state width="1876" height="223" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587324613844" />
+    <state width="1877" height="212" key="GridCell.Tab.0.left" timestamp="1588275789834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="103" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587294696975" />
-    <state width="1876" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
-    <state width="1876" height="103" key="GridCell.Tab.0.right" timestamp="1587294696975">
+    <state width="1877" height="212" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588275789834" />
+    <state width="1876" height="223" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587324613844" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right" timestamp="1588275789834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="103" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587294696975" />
-    <state width="1876" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586453483416" />
+    <state width="1877" height="212" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588275789834" />
+    <state width="1876" height="223" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587324613844" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1586185337271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="255" key="IDE.errors.dialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586185337271" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1586165712591">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1459" y="162" key="SettingsEditor" timestamp="1588262019797">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1585905523156" />
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586165712591" />
+    <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262019797" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588261350579" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584873464443" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587293429397">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1264" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588262034467">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587293429397" />
+    <state x="-1264" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262034467" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588261373180" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586424177683" />
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585241603937">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -191,10 +207,61 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586450848955" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584873896165" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586452478833">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588262204905">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586452478833" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262204905" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587315776318" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586428570270" />
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
   </component>
 </project>

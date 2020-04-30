@@ -95,15 +95,16 @@ public class SubForo implements SujetoObservable, Serializable {
             }
             return false;
     }
-    
+
+
     public void listarEntrada(String subForos) {
         for(SubForo subForo: managerSubForos.getListadoDeForos()){
             if(subForo.getTituloSubForo().equals(subForos)){
                 System.out.println("listado de entradas");
                 for (EntradaReal entradaReal : entry) {
                     if (!(entry.isEmpty())){
-                       // System.out.println("\n" + entradaReal.getTituloEntrada() +" " +" "+"Positivo "+ entradaReal.getValoracionPositiva()+" "+ "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
-                        System.out.println(entradaReal.toString());
+                        System.out.println("\n" + entradaReal.getTituloEntrada() +" " +" "+"Positivo "+ entradaReal.getValoracionPositiva()+" "+ "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick()+"el contenido es: ");
+                       System.out.println(entradaReal.toString());
                         entradaReal.mostrarComentarios(entradaReal.getTituloEntrada());
                       //  System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
 

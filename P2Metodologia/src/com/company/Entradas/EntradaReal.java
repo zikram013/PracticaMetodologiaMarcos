@@ -1,5 +1,6 @@
 package com.company.Entradas;
 
+import com.company.Comentarios.Comentarios;
 import com.company.EntradaAbstracta;
 import com.company.SubForos.SubForo;
 import com.company.Users.Usuario;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 
 public class EntradaReal extends EntradaAbstracta {
 
-    private ArrayList<EntradaAbstracta>entradaAbstracta= new ArrayList<EntradaAbstracta>();
+    private ArrayList<EntradaAbstracta>entradaAbstracta;
 
     public EntradaReal(String tituloEntrada, SubForo subForo, Usuario creador) {
         super(tituloEntrada, subForo, creador);
@@ -25,9 +26,7 @@ public class EntradaReal extends EntradaAbstracta {
 
     @Override
     public String toString() {
-        return "EntradaReal{" +
-                "entradaAbstracta=" + entradaAbstracta +
-                '}';
+        return ""+ entradaAbstracta;
     }
 
     @Override
@@ -47,4 +46,6 @@ public class EntradaReal extends EntradaAbstracta {
             abstracta.mostrar(profundidad + 1);
         }
     }
+
+
 }

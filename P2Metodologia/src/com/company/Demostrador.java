@@ -11,61 +11,17 @@ import com.company.Users.ManagerUsuario;
 import com.company.Users.Usuario;
 import com.company.Verificar.Verificar;
 
-public class Main {
+import java.net.UnknownServiceException;
+import java.util.HashSet;
+
+public class Demostrador {
 
     public static void main(String[] args) {
-/*
-        ManagerUsuario managerUsuario=ManagerUsuario.leerInfoUsuarios();
-        new ManagerSubForos(managerUsuario);
-        ManagerSubForos managerSubForos= ManagerSubForos.leerInfoForos();
 
-
-        ArrayList<Usuario>listado=new ArrayList<>(managerUsuario.getListaDeUsuarios());
-        ArrayList<SubForo>listaDeForos=new ArrayList<>(managerSubForos.getListadoDeForos());
-
-        if(listado.size() <= 0){
-            System.out.println("no hay usuarios");
-        }else{
-            System.out.println("El numero de usuarios registrados es: "+listado.size());
-            managerUsuario.listarUsuarios();
-        }
-        System.out.println("El administrador es" +listado.get(3).toString());
-
-        if(listaDeForos.size()<=0){
-            System.out.println("no hay foros");
-        }else{
-            System.out.println("el numero de foros es: "+listaDeForos.size());
-            managerSubForos.mostrarSubForo();
-        }
-        managerSubForos.mostrarLasSucripciones(listaDeForos.get(0));
-        listaDeForos.get(0).listarEntrada(listaDeForos.get(0).getTituloSubForo());
-
-        managerUsuario.iniciarSesion(listado.get(0));
-        SubForo foro=new SubForo("Metodlogia",managerSubForos);
-        managerSubForos.crearSubforos(foro,listado.get(0));
-        managerUsuario.desconectar(listado.get(0));
-        managerSubForos.mostrarSubForo();*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //SubForo subForo=new SubForo("Dejame pasar",managerSubForos);
         ManagerUsuario managerUsuario=new ManagerUsuario();
         ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
         Verificar verificar=new Verificar(managerUsuario,managerSubForos);
+
 
 
         System.out.println("Se crean los usuarios");
@@ -73,18 +29,22 @@ public class Main {
         Usuario usuario1=new Usuario("miguel","ruiz","yoshiki","yoshiki","verboten","alumno");
         Usuario admin=new Usuario("admin","admin","admin","admin","admin","admin");
         Usuario usuario2=new Usuario("Camila","Costanzo","cami","cami","cami","alumno");
+        Usuario usuario3=new Usuario("No","Existe","no","no","no","alumno");
         managerUsuario.crearUsuario(usuario);
         managerUsuario.crearUsuario(usuario1);
         managerUsuario.crearUsuario(usuario2);
         managerUsuario.crearUsuario(admin);
         managerUsuario.guardarInfoUsuarios();
 
-        managerUsuario.iniciarSesion(usuario);
+        System.out.println(managerUsuario.encontradoRolAdministrador());
+
+        managerUsuario.iniciarSesion(usuario3.getCorreo(),usuario3.getContraseña());
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContraseña());
 
         SubForo foro=new SubForo("Prueba",managerSubForos);
         SubForo foro2=new SubForo("Prueba2",managerSubForos);
         managerSubForos.crearSubforos(foro,usuario);
-
+        managerSubForos.crearSubforos(foro2,usuario);
         managerSubForos.inscripcion(foro,usuario);
         managerSubForos.mostrarLasSucripciones(foro);
 
@@ -95,28 +55,31 @@ public class Main {
         managerUsuario.desconectar(usuario);
 
 
-        managerUsuario.iniciarSesion(admin);
+        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContraseña());
         verificar.mostrarEntradasParaVerificar(admin);
         verificar.verificacion("A",entradaReal,admin);
         verificar.eliminar(entradaReal);
         managerUsuario.desconectar(admin);
 
-        System.out.println("el usuario "+usuario.getRol()+" esta sancionado " +usuario.isSancion());
+        System.out.println("el usuario "+usuario.getNick()+" esta sancionado " +usuario.isSancion());
 
-        managerUsuario.iniciarSesion(usuario1);
+        managerUsuario.iniciarSesion(usuario1.getCorreo(),usuario1.getContraseña());
+        managerSubForos.inscripcion(foro2,usuario1);
         EntradaReal entradaReal1=new EntradaReal("SegundaPrueba",foro2,usuario1);
-        entradaReal1.agregar(new Texto(entradaReal1.tituloEntrada,foro,usuario1,"hola hola"));
-       managerUsuario.desconectar(usuario1);
+        entradaReal1.agregar(new Texto(entradaReal1.tituloEntrada,foro2,usuario1,"hola hola"));
+        verificar.entradasParaValidar(entradaReal1);
+        managerUsuario.desconectar(usuario1);
 
-        managerUsuario.iniciarSesion(admin);
+
+        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContraseña());
         verificar.mostrarEntradasParaVerificar(admin);
-        verificar.verificacion("A",entradaReal1,admin);
+        verificar.verificacion("D",entradaReal1,admin);
         verificar.eliminar(entradaReal1);
         managerUsuario.desconectar(admin);
 
+        System.out.println("el usuario "+usuario1.getNick()+" esta sancionado " +usuario1.isSancion());
 
-
-        managerUsuario.iniciarSesion(usuario);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContraseña());
 
         Comentarios comentario=new Comentarios("Ha funcionado el patron");
         entradaReal.crearComentario(comentario);
@@ -127,15 +90,32 @@ public class Main {
         entradaReal1.mostrarComentarios(entradaReal1.getTituloEntrada());
         managerUsuario.desconectar(usuario);
 
-        managerUsuario.iniciarSesion(usuario2);
+        managerUsuario.iniciarSesion(usuario2.getCorreo(),usuario2.getContraseña());
         foro.votarEntrada(usuario2,entradaReal.getTituloEntrada(),foro.getTituloSubForo(),"P");
         foro.listarEntrada(foro.getTituloSubForo());
         managerUsuario.desconectar(usuario2);
 
+
+        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContraseña());
+        verificar.mostrarEntradasParaVerificar(admin);
+        verificar.verificacion("D",entradaReal1,admin);
+        verificar.eliminar(entradaReal1);
+        managerUsuario.desconectar(admin);
+
+
+        managerUsuario.guardarInfoUsuarios();
         managerSubForos.guardarInfoForos();
 
+        managerUsuario.setListaDeUsuarios(ManagerUsuario.leerInfoUsuarios());
+        managerUsuario.listarUsuarios();
 
-
+        managerSubForos.setListadoDeForos(ManagerSubForos.leerInfoForos());
+        managerSubForos.mostrarSubForo();
+        managerSubForos.mostrarLasSucripciones(managerSubForos.getSubforoEncontrado("Prueba"));
+        managerSubForos.mostrarLasSucripciones(managerSubForos.getSubforoEncontrado("Prueba2"));
+        managerSubForos.getSubforoEncontrado("Prueba").listarEntrada("Prueba");
+        managerSubForos.getSubforoEncontrado("Prueba2").listarEntrada("Prueba2");
+        managerSubForos.getSubforoEncontrado("Prueba").getEntradaEncontrada("Hola").mostrarComentarios("Hola");
     }
 
 }

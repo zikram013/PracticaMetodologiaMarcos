@@ -94,20 +94,11 @@ public abstract class EntradaAbstracta implements Serializable {
     }
 
     @Override
-    public String toString() {
-        return "EntradaAbstracta{" +
-                "tituloEntrada='" + tituloEntrada + '\'' +
-                ", valoracionPositiva=" + valoracionPositiva +
-                ", valoracionNegativa=" + valoracionNegativa +
-                ", creador=" + creador.getNick() +
-
-                '}';
-    }
+    abstract  public String toString();
 
     abstract public void agregar(EntradaAbstracta ea);
     abstract public void eliminar(EntradaAbstracta ea);
     abstract public void mostrar(int profundidad);
-
 
 
     public boolean crearComentario(Comentarios coment){
@@ -141,5 +132,8 @@ public abstract class EntradaAbstracta implements Serializable {
 
     }
 
+    public void dameElTexto(String titulo){
+
+    }
 
 }

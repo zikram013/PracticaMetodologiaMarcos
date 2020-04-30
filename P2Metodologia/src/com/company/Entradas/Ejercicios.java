@@ -25,7 +25,7 @@ public class Ejercicios extends EntradaAbstracta implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString()+" "+preguntasEjercicios;
+        return preguntasEjercicios;
     }
 
     @Override

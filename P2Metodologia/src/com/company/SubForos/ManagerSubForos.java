@@ -114,7 +114,6 @@ public class ManagerSubForos implements Observador, Serializable {
                 for(Usuario suscrito: foro.getUsuariosSuscritos()){
                     System.out.println(suscrito.getNick());
                 }
-
             }
         }
     }
@@ -166,9 +165,10 @@ public class ManagerSubForos implements Observador, Serializable {
 
     public boolean guardarInfoForos(){
         try{
-            FileOutputStream fos=new FileOutputStream("BaseDeDatosForos.obj");
+            FileOutputStream fos=new FileOutputStream("BaseDeDatosForosV2.obj");
             ObjectOutputStream oos=new ObjectOutputStream(fos);
-            oos.writeObject(this);
+            HashSet<SubForo> guardarForos = new HashSet<>(listadoDeForos);
+            oos.writeObject(guardarForos);
             oos.close();
             fos.close();
             return true;
@@ -178,12 +178,13 @@ public class ManagerSubForos implements Observador, Serializable {
         }
     }
 
-    public static ManagerSubForos leerInfoForos(){
-        ManagerSubForos su = null;
+    public static HashSet<SubForo> leerInfoForos(){
+       HashSet<SubForo> su = new HashSet<SubForo>();
         try {
-            FileInputStream file =new FileInputStream("BaseDeDatosForos.obj");
+            FileInputStream file =new FileInputStream("BaseDeDatosForosV2.obj");
             ObjectInputStream inputFile = new ObjectInputStream(file);
-            su = (ManagerSubForos) inputFile.readObject();
+
+            su = (HashSet<SubForo>) inputFile.readObject();
 
             inputFile.close();
             file.close();

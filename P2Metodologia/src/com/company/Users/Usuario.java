@@ -113,16 +113,15 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "Usuario{" +
-                "managerUsuario=" + managerUsuario +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", nick='" + nick + '\'' +
-                ", correo='" + correo + '\'' +
-                ", contraseña='" + contraseña + '\'' +
-                ", rol='" + rol + '\'' +
-                ", conectado=" + conectado +
-                ", sancion=" + sancion +
+        return
+                "nombre='" + nombre + '\'' +
+                " apellido='" + apellido + '\'' +
+                " nick='" + nick + '\'' +
+                " correo='" + correo + '\'' +
+                " contraseña='" + contraseña + '\'' +
+                " rol='" + rol + '\'' +
+                " conectado=" + conectado +
+                " sancion=" + sancion +
                 '}';
     }
 }
