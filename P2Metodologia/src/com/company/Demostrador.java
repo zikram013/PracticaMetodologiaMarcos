@@ -11,9 +11,6 @@ import com.company.Users.ManagerUsuario;
 import com.company.Users.Usuario;
 import com.company.Verificar.Verificar;
 
-import java.net.UnknownServiceException;
-import java.util.HashSet;
-
 public class Demostrador {
 
     public static void main(String[] args) {
@@ -38,8 +35,8 @@ public class Demostrador {
 
         System.out.println(managerUsuario.encontradoRolAdministrador());
 
-        managerUsuario.iniciarSesion(usuario3.getCorreo(),usuario3.getContraseña());
-        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContraseña());
+        managerUsuario.iniciarSesion(usuario3.getCorreo(),usuario3.getContrasena());
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
 
         SubForo foro=new SubForo("Prueba",managerSubForos);
         SubForo foro2=new SubForo("Prueba2",managerSubForos);
@@ -55,7 +52,7 @@ public class Demostrador {
         managerUsuario.desconectar(usuario);
 
 
-        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContraseña());
+        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContrasena());
         verificar.mostrarEntradasParaVerificar(admin);
         verificar.verificacion("A",entradaReal,admin);
         verificar.eliminar(entradaReal);
@@ -63,7 +60,7 @@ public class Demostrador {
 
         System.out.println("el usuario "+usuario.getNick()+" esta sancionado " +usuario.isSancion());
 
-        managerUsuario.iniciarSesion(usuario1.getCorreo(),usuario1.getContraseña());
+        managerUsuario.iniciarSesion(usuario1.getCorreo(),usuario1.getContrasena());
         managerSubForos.inscripcion(foro2,usuario1);
         EntradaReal entradaReal1=new EntradaReal("SegundaPrueba",foro2,usuario1);
         entradaReal1.agregar(new Texto(entradaReal1.tituloEntrada,foro2,usuario1,"hola hola"));
@@ -71,7 +68,7 @@ public class Demostrador {
         managerUsuario.desconectar(usuario1);
 
 
-        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContraseña());
+        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContrasena());
         verificar.mostrarEntradasParaVerificar(admin);
         verificar.verificacion("D",entradaReal1,admin);
         verificar.eliminar(entradaReal1);
@@ -79,7 +76,7 @@ public class Demostrador {
 
         System.out.println("el usuario "+usuario1.getNick()+" esta sancionado " +usuario1.isSancion());
 
-        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContraseña());
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
 
         Comentarios comentario=new Comentarios("Ha funcionado el patron");
         entradaReal.crearComentario(comentario);
@@ -90,13 +87,13 @@ public class Demostrador {
         entradaReal1.mostrarComentarios(entradaReal1.getTituloEntrada());
         managerUsuario.desconectar(usuario);
 
-        managerUsuario.iniciarSesion(usuario2.getCorreo(),usuario2.getContraseña());
+        managerUsuario.iniciarSesion(usuario2.getCorreo(),usuario2.getContrasena());
         foro.votarEntrada(usuario2,entradaReal.getTituloEntrada(),foro.getTituloSubForo(),"P");
         foro.listarEntrada(foro.getTituloSubForo());
         managerUsuario.desconectar(usuario2);
 
 
-        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContraseña());
+        managerUsuario.iniciarSesion(admin.getCorreo(),admin.getContrasena());
         verificar.mostrarEntradasParaVerificar(admin);
         verificar.verificacion("D",entradaReal1,admin);
         verificar.eliminar(entradaReal1);

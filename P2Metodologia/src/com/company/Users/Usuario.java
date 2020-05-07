@@ -10,7 +10,7 @@ public class Usuario implements Serializable {
     private String apellido;
     private String nick;
     private String correo;
-    private String contraseña;
+    private String contrasena;
     private String rol;
     private boolean conectado;
     private boolean sancion;
@@ -19,12 +19,12 @@ public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     //Constructor,getters and setters
 
-    public Usuario(String nombre, String apellido, String nick, String correo, String contraseña,String rol) {
+    public Usuario(String nombre, String apellido, String nick, String correo, String contrasena, String rol) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.nick = nick;
         this.correo = correo;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
         this.rol=rol;
         this.conectado=false;
         this.sancion=false;
@@ -91,12 +91,12 @@ public class Usuario implements Serializable {
         this.correo = correo;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public static Usuario getInstanciausuario(){
@@ -118,7 +118,7 @@ public class Usuario implements Serializable {
                 " apellido='" + apellido + '\'' +
                 " nick='" + nick + '\'' +
                 " correo='" + correo + '\'' +
-                " contraseña='" + contraseña + '\'' +
+                " contraseña='" + contrasena + '\'' +
                 " rol='" + rol + '\'' +
                 " conectado=" + conectado +
                 " sancion=" + sancion +

@@ -94,7 +94,7 @@ public class ManagerUsuario implements Observador, Serializable {
 
     public Usuario usuarioExisteSistema(String correo,String password){
         for(Usuario usuario:listaDeUsuarios){
-            if(usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)){
+            if(usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(password)){
                 return usuario;
             }
         }
@@ -104,7 +104,7 @@ public class ManagerUsuario implements Observador, Serializable {
     public void iniciarSesion(String correo,String password){
         boolean encontrado=false;
         for(Usuario usuario:listaDeUsuarios) {
-            if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)) {
+            if (usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(password)) {
                 if (!usuario.isConectado() && !usuario.isSancion()) {
                     encontrado=true;
                     usuario.setConectado(true);
