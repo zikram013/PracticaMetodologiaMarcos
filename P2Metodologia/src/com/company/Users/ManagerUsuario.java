@@ -28,13 +28,11 @@ public class ManagerUsuario implements Observador, Serializable {
 
 
 
-    public boolean crearUsuario(Usuario usuario){
+    public void crearUsuario(Usuario usuario){
         if(this.getListaDeUsuarios().contains(usuario.getCorreo()) || this.getListaDeUsuarios().contains(usuario.getNick())) {
-            return false;
         }else{
 
             listaDeUsuarios.add(usuario);
-            return true;
         }
     }
 
