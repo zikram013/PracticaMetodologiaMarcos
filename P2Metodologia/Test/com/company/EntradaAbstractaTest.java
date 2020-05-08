@@ -14,14 +14,15 @@ public class EntradaAbstractaTest {
     ManagerUsuario managerUsuario=new ManagerUsuario();
     ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
 
-
-
     @Test
     public void crearComentario() {
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
         SubForo subForo=new SubForo("Testing",managerSubForos);
         EntradaReal entradaReal=new EntradaReal("Testeo Entrada",subForo,usuario);
         Comentarios comentarios=new Comentarios("Haciendo test con junit");
-       assertTrue(entradaReal.getComentar().add(comentarios));
+        managerUsuario.crearUsuario(usuario);
+        managerSubForos.crearSubforos(subForo,usuario);
+        subForo.crearEntrada(entradaReal);
+        assertTrue(entradaReal.crearComentario(comentarios));
     }
 }

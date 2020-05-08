@@ -13,14 +13,16 @@ public class ManagerSubForosTest {
     @Test
     public void crearSubforos() {
         SubForo subForo=new SubForo("Testing",managerSubForos);
-        assertTrue(managerSubForos.getListadoDeForos().add(subForo));
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        managerUsuario.crearUsuario(usuario);
+        assertTrue(managerSubForos.crearSubforos(subForo,usuario));
     }
 
     @Test
     public void encontrarSubforos() {
         SubForo subForo=new SubForo("Testing",managerSubForos);
         managerSubForos.getListadoDeForos().add(subForo);
-        assertTrue(managerSubForos.getListadoDeForos().contains(subForo));
+        assertTrue(managerSubForos.encontrarSubforos("Testing"));
     }
 
 
@@ -28,6 +30,6 @@ public class ManagerSubForosTest {
     public void inscripcion() {
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
         SubForo subForo=new SubForo("Testing",managerSubForos);
-       assertTrue(subForo.getUsuariosSuscritos().add(usuario));
+       assertTrue(managerSubForos.inscripcion(subForo,usuario));
     }
 }

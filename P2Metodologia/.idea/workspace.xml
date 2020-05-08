@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/com/company/EntradaAbstractaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/EntradaAbstractaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/com/company/SubForos/ManagerSubForosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/SubForos/ManagerSubForosTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/Metodologia/com/company/SubForos/ManagerSubForosTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Metodologia/com/company/SubForos/ManagerSubForosTest.class" afterDir="false" />
     </list>
@@ -72,7 +73,7 @@
       <recent name="com.company" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllTest">
+  <component name="RunManager" selected="JUnit.EntradaAbstractaTest.crearComentario">
     <configuration name="All in Metodologia" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Metodologia" />
       <useClassPathOnly />
@@ -100,6 +101,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EntradaAbstractaTest.crearComentario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Metodologia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.EntradaAbstractaTest" />
+      <option name="METHOD_NAME" value="crearComentario" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerSubForosTest.crearSubforos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Metodologia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.SubForos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.SubForos" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.ManagerSubForosTest" />
+      <option name="METHOD_NAME" value="crearSubforos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerSubForosTest.encontrarSubforos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Metodologia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.SubForos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.SubForos" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.ManagerSubForosTest" />
+      <option name="METHOD_NAME" value="encontrarSubforos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ManagerSubForosTest.inscripcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
@@ -116,61 +165,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubForoTest.VotarEntradaNegativa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Metodologia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.SubForos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.SubForos" />
-      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
-      <option name="METHOD_NAME" value="VotarEntradaNegativa" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SubForoTest.crearEntrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Metodologia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.SubForos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.SubForos" />
-      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
-      <option name="METHOD_NAME" value="crearEntrada" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SubForoTest.votarEntradaPositiva" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Metodologia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.SubForos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.SubForos" />
-      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
-      <option name="METHOD_NAME" value="votarEntradaPositiva" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AllTest" />
+        <item itemvalue="JUnit.EntradaAbstractaTest.crearComentario" />
+        <item itemvalue="JUnit.ManagerSubForosTest.crearSubforos" />
+        <item itemvalue="JUnit.ManagerSubForosTest.encontrarSubforos" />
         <item itemvalue="JUnit.ManagerSubForosTest.inscripcion" />
-        <item itemvalue="JUnit.SubForoTest.VotarEntradaNegativa" />
-        <item itemvalue="JUnit.SubForoTest.votarEntradaPositiva" />
-        <item itemvalue="JUnit.SubForoTest.crearEntrada" />
+        <item itemvalue="JUnit.AllTest" />
       </list>
     </recent_temporary>
   </component>
@@ -250,26 +251,26 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866069350" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1588955930403">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1588962421683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588955930403" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1588955930403">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588962421683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1588962421683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588955930403" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1588955930403">
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588962421683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1588962421683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588955930403" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1588955930403">
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588962421683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1588962421683">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588955930403" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588962421683" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1588880785204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -300,12 +301,12 @@
     <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262019797" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866604213" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584873464443" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588927629984">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588961703710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1264" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262034467" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588927629984" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588350631240" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588961703710" />
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588866643036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
