@@ -28,6 +28,6 @@ public class ManagerSubForosTest {
     public void inscripcion() {
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
         SubForo subForo=new SubForo("Testing",managerSubForos);
-       assertTrue(managerSubForos.inscripcion(subForo,usuario));
+       assertTrue(subForo.getUsuariosSuscritos().add(usuario));
     }
 }
