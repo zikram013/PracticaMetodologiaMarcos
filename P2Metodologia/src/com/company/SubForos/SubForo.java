@@ -35,7 +35,7 @@ public class SubForo implements SujetoObservable, Serializable {
     }
 
 
-    public SubForo() {
+    public SubForo(){
 
     }
 

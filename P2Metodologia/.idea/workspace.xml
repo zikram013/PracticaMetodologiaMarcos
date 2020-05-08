@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/com/company/Users/ManagerUsuarioTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/com/company/Users/UsuarioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/com/company/AllTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/com/company/EntradaAbstractaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/com/company/SubForos/ManagerSubForosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/com/company/Verificar/VerificarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Metodologia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Metodologia.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Demostrador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Demostrador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/ManagerUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/ManagerUsuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Metodologia/com/company/Users/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/com/company/Users/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/Users/UsuarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Metodologia/com/company/Users/UsuarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Metodologia/com/company/Users/UsuarioTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
         <option value="JUnit4 Test Class" />
       </list>
     </option>
@@ -63,20 +62,23 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.company.Users" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+      <recent name="com.company.Verificar" />
+      <recent name="com.company.SubForos" />
+      <recent name="com.company.Users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Repositorios\MpIndividual\PracticaMetodologiaMarcos\P2Metodologia\src\com\company\Users" />
       <recent name="D:\Repositorios\MpIndividual\PracticaMetodologiaMarcos\P2Metodologia\src\com\company\ArchivosTextoPlano" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.UsuarioTest.isConectado">
+  <component name="RunManager" selected="JUnit.SubForoTest.VotarEntradaNegativa">
     <configuration name="All in Metodologia" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Metodologia" />
       <useClassPathOnly />
@@ -89,81 +91,81 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerUsuarioTest.encontradoRolProfesor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EntradaAbstractaTest.crearComentario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Users.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Users" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Users.ManagerUsuarioTest" />
-      <option name="METHOD_NAME" value="encontradoRolProfesor" />
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.EntradaAbstractaTest" />
+      <option name="METHOD_NAME" value="crearComentario" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerUsuarioTest.usuarioExisteSistema" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubForoTest.VotarEntradaNegativa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Users.*" />
+          <option name="PATTERN" value="com.company.SubForos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Users" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Users.ManagerUsuarioTest" />
-      <option name="METHOD_NAME" value="usuarioExisteSistema" />
+      <option name="PACKAGE_NAME" value="com.company.SubForos" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
+      <option name="METHOD_NAME" value="VotarEntradaNegativa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioTest.isConectado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubForoTest.crearEntrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Users.*" />
+          <option name="PATTERN" value="com.company.SubForos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Users" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Users.UsuarioTest" />
-      <option name="METHOD_NAME" value="isConectado" />
+      <option name="PACKAGE_NAME" value="com.company.SubForos" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
+      <option name="METHOD_NAME" value="crearEntrada" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioTest.isSancion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubForoTest.votarEntradaPositiva" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Users.*" />
+          <option name="PATTERN" value="com.company.SubForos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Users" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Users.UsuarioTest" />
-      <option name="METHOD_NAME" value="isSancion" />
+      <option name="PACKAGE_NAME" value="com.company.SubForos" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
+      <option name="METHOD_NAME" value="votarEntradaPositiva" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsuarioTest.sancion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VerificarTest.verificacion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Users.*" />
+          <option name="PATTERN" value="com.company.Verificar.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.Users" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Users.UsuarioTest" />
-      <option name="METHOD_NAME" value="sancion" />
+      <option name="PACKAGE_NAME" value="com.company.Verificar" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Verificar.VerificarTest" />
+      <option name="METHOD_NAME" value="verificacion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UsuarioTest.isConectado" />
-        <item itemvalue="JUnit.UsuarioTest.sancion" />
-        <item itemvalue="JUnit.UsuarioTest.isSancion" />
-        <item itemvalue="JUnit.ManagerUsuarioTest.usuarioExisteSistema" />
-        <item itemvalue="JUnit.ManagerUsuarioTest.encontradoRolProfesor" />
+        <item itemvalue="JUnit.SubForoTest.VotarEntradaNegativa" />
+        <item itemvalue="JUnit.SubForoTest.votarEntradaPositiva" />
+        <item itemvalue="JUnit.SubForoTest.crearEntrada" />
+        <item itemvalue="JUnit.EntradaAbstractaTest.crearComentario" />
+        <item itemvalue="JUnit.VerificarTest.verificacion" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +210,14 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262130382" />
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588932886774">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588932886774" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1588933449980">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588933449980" />
     <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586449926944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -247,42 +257,46 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866069350" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1588870048715">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1588936264252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588870048715" />
-    <state width="1877" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588350745987" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1588870048714">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588936264252" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
+    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1588936264252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588870048714" />
-    <state width="1877" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588350745987" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1588870048714">
+    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588936264252" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
+    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1588936264252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588870048714" />
-    <state width="1877" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588350745987" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1588870048714">
+    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588936264252" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785203" />
+    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1588936264252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588870048714" />
-    <state width="1877" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588350745987" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1588867700610">
+    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588936264252" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1588880785204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1588867700610">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1588880785204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1588867700610">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1588880785204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1588867700610">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1588880785204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588880785204" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1586185337271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -293,20 +307,20 @@
     <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262019797" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866604213" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584873464443" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588865902282">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588927629984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1264" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262034467" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588865902282" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588927629984" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588350631240" />
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588866643036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866643036" />
-    <state x="724" y="238" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588869634220">
+    <state x="724" y="238" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588935617260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="724" y="238" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588869634220" />
+    <state x="724" y="238" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588935617260" />
     <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1588865591279">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

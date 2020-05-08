@@ -18,6 +18,6 @@ public class UsuarioTest {
     public void isConectado() {
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","alumno");
         usuario.setConectado(true);
-        assertEquals("no sancion",true,usuario.isConectado());
+        assertEquals("no conectado",true,usuario.isConectado());
     }
 }
