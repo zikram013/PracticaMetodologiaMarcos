@@ -41,7 +41,7 @@ public class SubForoTest {
     }
 
     @Test
-    public void VotarEntradaNegativa(){
+    public void votarEntradaNegativa(){
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
         managerUsuario.crearUsuario(usuario);
         managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
@@ -53,6 +53,21 @@ public class SubForoTest {
         subForo.votarEntrada(usuario,entradaReal.getTituloEntrada(),subForo.getTituloSubForo(),"N");
         assertEquals("Voto Negativo",1,entradaReal.getValoracionNegativa());
 
+    }
+
+    @Test
+    public void usuarioYaHaVotado(){
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
+        SubForo subForo=new SubForo("Testing",managerSubForos);
+        managerSubForos.crearSubforos(subForo,usuario);
+        EntradaReal entradaReal=new EntradaReal("Testeo Entrada",subForo,usuario);
+        entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),subForo,usuario,"Ejercicio Testing"));
+        subForo.crearEntrada(entradaReal);
+        subForo.votarEntrada(usuario,entradaReal.getTituloEntrada(),subForo.getTituloSubForo(),"N");
+        subForo.votarEntrada(usuario,entradaReal.getTituloEntrada(),subForo.getTituloSubForo(),"P");
+        assertEquals("Ya ha votado",0,entradaReal.getValoracionPositiva());
     }
 
     @Test

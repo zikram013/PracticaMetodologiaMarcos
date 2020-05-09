@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/com/company/Verificar/VerificarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/Verificar/VerificarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/EntradaAbstracta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EntradaAbstracta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Verificar/Verificar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Verificar/Verificar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +70,7 @@
       <recent name="D:\Repositorios\MpIndividual\PracticaMetodologiaMarcos\P2Metodologia\src\com\company\ArchivosTextoPlano" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllTest">
+  <component name="RunManager" selected="JUnit.SubForoTest.usuarioYaHaVotado">
     <configuration name="All in Metodologia" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Metodologia" />
       <useClassPathOnly />
@@ -107,22 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntradaAbstractaTest.crearComentario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Metodologia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.EntradaAbstractaTest" />
-      <option name="METHOD_NAME" value="crearComentario" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SubForoTest.edicionEntrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
@@ -134,6 +109,22 @@
       <option name="PACKAGE_NAME" value="com.company.SubForos" />
       <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
       <option name="METHOD_NAME" value="edicionEntrada" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubForoTest.usuarioYaHaVotado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Metodologia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.SubForos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.SubForos" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
+      <option name="METHOD_NAME" value="usuarioYaHaVotado" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SubForoTest.usuarioYaHaVotado" />
         <item itemvalue="JUnit.AllTest" />
         <item itemvalue="JUnit.SubForoTest.edicionEntrada" />
         <item itemvalue="JUnit.VerificarTest.eliminar" />
         <item itemvalue="JUnit.VerificarTest.verificacionNegativa" />
-        <item itemvalue="JUnit.EntradaAbstractaTest.crearComentario" />
       </list>
     </recent_temporary>
   </component>
@@ -263,26 +254,26 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866069350" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1589043126710">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1589046382186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1589043126710">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589046382186" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1589046382185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1589043126710">
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589046382185" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1589046382185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1589043126710">
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589046382185" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1589046382185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589046382185" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589023190804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
