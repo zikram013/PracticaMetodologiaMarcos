@@ -117,12 +117,23 @@ public class SubForo implements SujetoObservable, Serializable {
         }
     }
 
-    public EntradaAbstracta getEntradaEncontrada(String tituloDeLaEntrada){
+    public EntradaReal getEntradaEncontrada(String tituloDeLaEntrada){
        // System.out.println("Buscando el subforo");
-        for (EntradaAbstracta entradaAbstracta :entry){
-            if(entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)){
+        for (EntradaReal entradaReal :entry){
+            if(entradaReal.getTituloEntrada().equals(tituloDeLaEntrada)){
                // System.out.println("Subforo encontrado");
-                return entradaAbstracta;
+                return entradaReal;
+            }
+        }
+        return null;
+    }
+
+    public EntradaReal getEntradaEncontrada1(EntradaReal entradaReal){
+        // System.out.println("Buscando el subforo");
+        for (EntradaReal entradaReal1 :entry){
+            if(entry.contains(entradaReal)){
+                // System.out.println("Subforo encontrado");
+                return entradaReal1;
             }
         }
         return null;

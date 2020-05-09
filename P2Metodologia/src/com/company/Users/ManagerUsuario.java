@@ -80,7 +80,6 @@ public class ManagerUsuario implements Observador, Serializable {
     }
 
     public boolean usuarioRegistrado(Usuario usuarioExiste){
-        System.out.println("Comprobando que existe en el sistema");
         for(Usuario usuario :listaDeUsuarios){
             if(usuario.equals(usuarioExiste)){
                 System.out.println("El usuario exixte");
@@ -103,7 +102,7 @@ public class ManagerUsuario implements Observador, Serializable {
         boolean encontrado=false;
         for(Usuario usuario:listaDeUsuarios) {
             if (usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(password)) {
-                if (!usuario.isConectado() && !usuario.isSancion()) {
+                if(!usuario.isConectado() && !usuario.isSancion()) {
                     encontrado=true;
                     usuario.setConectado(true);
                     System.out.println("Bienvenido: " + usuario.getNombre() + " " + usuario.getApellido());

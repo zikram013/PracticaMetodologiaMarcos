@@ -66,7 +66,7 @@ public class ManagerSubForos implements Observador, Serializable {
     }
 
     public boolean crearSubforos(SubForo subforo,Usuario usuario){
-        if(managerUsuario.encontradoRolProfesor(usuario)){
+        if(managerUsuario.encontradoRolProfesor(usuario) && usuario.isConectado()){
             if(!(this.getListadoDeForos()==null)){
                 if(this.getListadoDeForos().contains(subforo)) {
                     return false;
@@ -119,25 +119,29 @@ public class ManagerSubForos implements Observador, Serializable {
     }
 
     public boolean inscripcion(SubForo subForo,Usuario usuario){
-        if(subForo.getUsuariosSuscritos().isEmpty()){
-            subForo.getUsuariosSuscritos().add(usuario);
-            System.out.println("Usted se ha inscrito en este foro "+subForo.getTituloSubForo());
-            return true;
-        }else{
-            for(SubForo foro:listadoDeForos){
-                if(foro.getTituloSubForo().equals(subForo.getTituloSubForo())){
-                    if(foro.getUsuariosSuscritos().contains(usuario)){
-                        System.out.println("Ya esta añadido");
-                        return false;
-                    }else{
-                        System.out.println("Se añade");
-                        subForo.getUsuariosSuscritos().add(usuario);
-                        return true;
+        if (usuario.isConectado()){
+            if(subForo.getUsuariosSuscritos().isEmpty()){
+                subForo.getUsuariosSuscritos().add(usuario);
+                System.out.println("Usted se ha inscrito en este foro "+subForo.getTituloSubForo());
+                return true;
+            }else{
+                for(SubForo foro:listadoDeForos){
+                    if(foro.getTituloSubForo().equals(subForo.getTituloSubForo())){
+                        if(foro.getUsuariosSuscritos().contains(usuario)){
+                            System.out.println("Ya esta añadido");
+                            return false;
+                        }else{
+                            System.out.println("Se añade");
+                            subForo.getUsuariosSuscritos().add(usuario);
+                            return true;
+                        }
                     }
                 }
             }
+            return false;
+        }else{
+            return false;
         }
-        return false;
     }
 
     @Override

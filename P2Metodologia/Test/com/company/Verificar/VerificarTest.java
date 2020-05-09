@@ -13,18 +13,40 @@ import static org.junit.Assert.*;
 public class VerificarTest {
     ManagerUsuario managerUsuario=new ManagerUsuario();
     ManagerSubForos managerSubForos=new ManagerSubForos(managerUsuario);
+    Verificar verificar=new Verificar(managerUsuario,managerSubForos);
+
+
     @Test
     public void verificacion() {
-        Verificar verificar=new Verificar(managerUsuario,managerSubForos);
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
-        Usuario usuarioAdmin=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        Usuario usuarioAdmin=new Usuario("admin","admin","admin","admin","admin","admin");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.crearUsuario(usuarioAdmin);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
         SubForo subForo=new SubForo("Testing",managerSubForos);
+        managerSubForos.crearSubforos(subForo,usuario);
         EntradaReal entradaReal=new EntradaReal("Testeo Entrada",subForo,usuario);
         entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),subForo,usuario,"Ejercicio Testing"));
-       entradaReal.setValidacion(true);
-       usuario.setSancion(false);
-        assertEquals("aprobado",true,entradaReal.isValidacion());
-        assertEquals("sin sancion",false,usuario.isSancion());
+        verificar.entradasParaValidar(entradaReal);
+        managerUsuario.desconectar(usuario);
+        managerUsuario.iniciarSesion(usuarioAdmin.getCorreo(),usuarioAdmin.getContrasena());
+        verificar.verificacion("A",entradaReal,usuarioAdmin);
+        assertEquals("Entrada verificada",true,entradaReal.isValidacion());
+        assertEquals("Usuario no sancionado",false,usuario.isSancion());
+
+        assertEquals("Entrada no encontrada",entradaReal,subForo.getEntradaEncontrada(entradaReal.getTituloEntrada()));
+    }
+
+    @Test
+    public void entradasParaValidar() {
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
+        SubForo subForo=new SubForo("Testing",managerSubForos);
+        managerSubForos.crearSubforos(subForo,usuario);
+        EntradaReal entradaReal=new EntradaReal("Testeo Entrada",subForo,usuario);
+        entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),subForo,usuario,"Ejercicio Testing"));
+        assertTrue(verificar.entradasParaValidar(entradaReal));
 
     }
 }

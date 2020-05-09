@@ -90,6 +90,7 @@ public class Demostrador {
         managerUsuario.iniciarSesion(usuario2.getCorreo(),usuario2.getContrasena());
         foro.votarEntrada(usuario2,entradaReal.getTituloEntrada(),foro.getTituloSubForo(),"P");
         foro.listarEntrada(foro.getTituloSubForo());
+
         managerUsuario.desconectar(usuario2);
 
 

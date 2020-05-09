@@ -32,8 +32,13 @@ public class Verificar {
         this.entradasPendienteDeVerificar = entradasPendienteDeVerificar;
     }
 
-    public void entradasParaValidar(EntradaAbstracta entradaAbstracta){
-        entradasPendienteDeVerificar.add((EntradaReal)entradaAbstracta);
+    public boolean entradasParaValidar(EntradaAbstracta entradaAbstracta){
+        if(entradasPendienteDeVerificar.add((EntradaReal)entradaAbstracta)){
+            System.out.println("entrada añadida");
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void verificacion(String aprobacion,EntradaAbstracta entradaAbstracta,Usuario usuario){
