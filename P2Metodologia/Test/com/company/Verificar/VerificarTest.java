@@ -49,4 +49,42 @@ public class VerificarTest {
         assertTrue(verificar.entradasParaValidar(entradaReal));
 
     }
+
+    @Test
+    public void verificacionNegativa(){
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        Usuario usuarioAdmin=new Usuario("admin","admin","admin","admin","admin","admin");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.crearUsuario(usuarioAdmin);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
+        SubForo subForo=new SubForo("Testing",managerSubForos);
+        managerSubForos.crearSubforos(subForo,usuario);
+        EntradaReal entradaReal=new EntradaReal("Testeo Entrada",subForo,usuario);
+        entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),subForo,usuario,"Ejercicio Testing"));
+        verificar.entradasParaValidar(entradaReal);
+        managerUsuario.desconectar(usuario);
+        managerUsuario.iniciarSesion(usuarioAdmin.getCorreo(),usuarioAdmin.getContrasena());
+        verificar.verificacion("D",entradaReal,usuarioAdmin);
+        assertEquals("Entrada verificada",true,entradaReal.isValidacion());
+        assertEquals("Usuario no sancionado",true,usuario.isSancion());
+        assertEquals("Entrada no encontrada",null,subForo.getEntradaEncontrada(entradaReal.getTituloEntrada()));
+    }
+
+    @Test
+    public void eliminar(){
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        Usuario usuarioAdmin=new Usuario("admin","admin","admin","admin","admin","admin");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.crearUsuario(usuarioAdmin);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
+        SubForo subForo=new SubForo("Testing",managerSubForos);
+        managerSubForos.crearSubforos(subForo,usuario);
+        EntradaReal entradaReal=new EntradaReal("Testeo Entrada",subForo,usuario);
+        entradaReal.agregar(new Ejercicios(entradaReal.getTituloEntrada(),subForo,usuario,"Ejercicio Testing"));
+        verificar.entradasParaValidar(entradaReal);
+        managerUsuario.desconectar(usuario);
+        managerUsuario.iniciarSesion(usuarioAdmin.getCorreo(),usuarioAdmin.getContrasena());
+        verificar.verificacion("D",entradaReal,usuarioAdmin);
+        assertTrue(verificar.eliminar(entradaReal));
+    }
 }

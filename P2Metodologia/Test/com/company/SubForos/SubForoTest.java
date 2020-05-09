@@ -54,4 +54,24 @@ public class SubForoTest {
         assertEquals("Voto Negativo",1,entradaReal.getValoracionNegativa());
 
     }
+
+    @Test
+    public void edicionEntrada() {
+        String edit = "entrada para testear la edicion";
+        String edicionEjericio="prueba edicion";
+        Usuario usuario = new Usuario("prueba", "prueba", "prueba", "prueba", "prueba", "profesor");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.iniciarSesion(usuario.getCorreo(), usuario.getContrasena());
+        SubForo subForo = new SubForo("Testing", managerSubForos);
+        managerSubForos.crearSubforos(subForo, usuario);
+        EntradaReal entradaReal = new EntradaReal("Testeo Entrada", subForo, usuario);
+        Ejercicios ejercicio = new Ejercicios(entradaReal.getTituloEntrada(), subForo, usuario, "Ejercicio Testing");
+        entradaReal.agregar(ejercicio);
+        subForo.crearEntrada(entradaReal);
+        subForo.edicion(usuario,entradaReal.getTituloEntrada(),subForo.getTituloSubForo(),edit,edicionEjericio);
+        ejercicio.setPreguntasEjercicios(edicionEjericio);
+        assertEquals("Edicion", edit, entradaReal.getTituloEntrada());
+        assertEquals("edicion",edicionEjericio,ejercicio.getPreguntasEjercicios());
+    }
+
 }

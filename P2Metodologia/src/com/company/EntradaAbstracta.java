@@ -99,6 +99,7 @@ public abstract class EntradaAbstracta implements Serializable {
     abstract public void agregar(EntradaAbstracta ea);
     abstract public void eliminar(EntradaAbstracta ea);
     abstract public void mostrar(int profundidad);
+    abstract public void editar(String editar);
 
 
     public boolean crearComentario(Comentarios coment){
@@ -129,10 +130,6 @@ public abstract class EntradaAbstracta implements Serializable {
                 }
             }
         }
-
-    }
-
-    public void dameElTexto(String titulo){
 
     }
 

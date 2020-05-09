@@ -81,13 +81,15 @@ public class Verificar {
         }
     }
 
-    public void eliminar(EntradaAbstracta entradaAbstracta){
+    public boolean eliminar(EntradaAbstracta entradaAbstracta){
         if(!entradasPendienteDeVerificar.isEmpty()) {
             if(entradaAbstracta.isValidacion()){
                 entradasPendienteDeVerificar.removeIf(er -> er.equals(entradaAbstracta));
+                return true;
             }
         }else{
             System.out.println("no hay entradas para eliminar");
         }
+        return false;
     }
 }

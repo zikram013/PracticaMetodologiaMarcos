@@ -3,16 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDeDatosForosV2.obj" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDatosForosV2.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDatosUsuarios.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/com/company/SubForos/ManagerSubForosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/SubForos/ManagerSubForosTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/com/company/Users/ManagerUsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/Users/ManagerUsuarioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/com/company/Verificar/VerificarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/Verificar/VerificarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Demostrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Demostrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/ManagerSubForos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/ManagerSubForos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/EntradaAbstracta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/EntradaAbstracta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Ejercicios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Encuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/EntradaReal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Entradas/Texto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Users/ManagerUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Verificar/Verificar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Verificar/Verificar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,20 +79,7 @@
       <recent name="D:\Repositorios\MpIndividual\PracticaMetodologiaMarcos\P2Metodologia\src\com\company\ArchivosTextoPlano" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EntradaAbstractaTest.crearComentario">
-    <configuration name="Demostrador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Demostrador" />
-      <module name="Metodologia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AllTest">
     <configuration name="All in Metodologia" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Metodologia" />
       <useClassPathOnly />
@@ -103,6 +88,21 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Metodologia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.AllTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubForoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SubForoTest.edicionEntrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
@@ -133,28 +133,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.company.SubForos" />
       <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VerificarTest.entradasParaValidar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Metodologia" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.Verificar.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.Verificar" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Verificar.VerificarTest" />
-      <option name="METHOD_NAME" value="entradasParaValidar" />
+      <option name="METHOD_NAME" value="edicionEntrada" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VerificarTest.verificacion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VerificarTest.eliminar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
@@ -164,7 +149,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.company.Verificar" />
       <option name="MAIN_CLASS_NAME" value="com.company.Verificar.VerificarTest" />
-      <option name="METHOD_NAME" value="verificacion" />
+      <option name="METHOD_NAME" value="eliminar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerificarTest.verificacionNegativa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Metodologia" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Verificar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.Verificar" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Verificar.VerificarTest" />
+      <option name="METHOD_NAME" value="verificacionNegativa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AllTest" />
+        <item itemvalue="JUnit.SubForoTest.edicionEntrada" />
+        <item itemvalue="JUnit.VerificarTest.eliminar" />
+        <item itemvalue="JUnit.VerificarTest.verificacionNegativa" />
         <item itemvalue="JUnit.EntradaAbstractaTest.crearComentario" />
-        <item itemvalue="JUnit.VerificarTest.verificacion" />
-        <item itemvalue="Application.Demostrador" />
-        <item itemvalue="JUnit.VerificarTest.entradasParaValidar" />
-        <item itemvalue="JUnit.SubForoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -223,11 +224,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586449926944" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1588272175733">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1589042856711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588272175733" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586427965717" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589042856711" />
     <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584873152471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -262,26 +263,26 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866069350" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1589025994801">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1589043126710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589025994801" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1589025994801">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1589043126710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589025994801" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1589025994800">
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1589043126710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589025994800" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1589025994801">
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1589043126710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588955558992" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589025994801" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589043126710" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589023190804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -344,12 +345,12 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586450848955" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584873896165" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588262204905">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589038419393">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262204905" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587315776318" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586428570270" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589038419393" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/P2Metodologia$All_in_Metodologia__1_.ic" NAME="All in Metodologia (1) Coverage Results" MODIFIED="1588866462837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

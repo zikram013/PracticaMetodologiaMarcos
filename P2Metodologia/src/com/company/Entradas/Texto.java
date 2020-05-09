@@ -43,4 +43,8 @@ public class Texto extends EntradaAbstracta implements Serializable {
         System.out.println("- "+tituloEntrada+" "+texto);
     }
 
+    @Override
+    public void editar(String edit) {
+        setTexto(edit);
+    }
 }

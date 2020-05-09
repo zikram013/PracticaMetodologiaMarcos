@@ -1,6 +1,8 @@
 package com.company.SubForos;
 
 import com.company.*;
+import com.company.Entradas.Ejercicios;
+import com.company.Entradas.Encuesta;
 import com.company.Entradas.EntradaReal;
 import com.company.Entradas.Texto;
 import com.company.Observer.Observador;
@@ -128,16 +130,6 @@ public class SubForo implements SujetoObservable, Serializable {
         return null;
     }
 
-    public EntradaReal getEntradaEncontrada1(EntradaReal entradaReal){
-        // System.out.println("Buscando el subforo");
-        for (EntradaReal entradaReal1 :entry){
-            if(entry.contains(entradaReal)){
-                // System.out.println("Subforo encontrado");
-                return entradaReal1;
-            }
-        }
-        return null;
-    }
 
     public void votarEntrada(Usuario user,String tituloDeLaEntrada,String tituloSubForo,String voto){
         String letra=voto;
@@ -217,5 +209,24 @@ public class SubForo implements SujetoObservable, Serializable {
                 ", entry=" + entry +
                 ", usuariosSuscritos=" + usuariosSuscritos +
                 '}';
+    }
+
+    public void edicion(Usuario user,String tituloDeLaEntrada,String tituloSubForo,String edicionTitulo,String edicionTexto) {
+        if (user.isConectado()) {
+            for (SubForo subForo : managerSubForos.getListadoDeForos()) {
+                if (subForo.getTituloSubForo().equals(tituloSubForo)) {
+                    System.out.println("listado de entradas");
+                    for (EntradaReal entradaReal : entry) {
+                        if (!(entry.isEmpty())) {
+                            System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa() + " Escrito por: " + entradaReal.getCreador().getNick());
+                            if (entradaReal.getTituloEntrada().equals(tituloDeLaEntrada) && entradaReal.getCreador().equals(user)) {
+                                entradaReal.setTituloEntrada(edicionTitulo);
+                                entradaReal.editar(edicionTexto);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

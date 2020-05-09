@@ -42,4 +42,9 @@ public class Encuesta extends EntradaAbstracta implements Serializable {
     public void mostrar(int profundidad) {
         System.out.println("- "+tituloEntrada+" "+cuestionario);
     }
+
+    @Override
+    public void editar(String edit) {
+        setCuestionario(edit);
+    }
 }

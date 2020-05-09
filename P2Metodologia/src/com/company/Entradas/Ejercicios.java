@@ -15,6 +15,10 @@ public class Ejercicios extends EntradaAbstracta implements Serializable {
         this.preguntasEjercicios = preguntasEjercicios;
     }
 
+    public Ejercicios(String tituloEntrada, SubForo subForo, Usuario creador) {
+        super(tituloEntrada, subForo, creador);
+    }
+
     public String getPreguntasEjercicios() {
         return preguntasEjercicios;
     }
@@ -41,5 +45,10 @@ public class Ejercicios extends EntradaAbstracta implements Serializable {
     @Override
     public void mostrar(int profundidad) {
         System.out.println("- "+tituloEntrada+" "+preguntasEjercicios);
+    }
+
+    @Override
+    public void editar(String edit) {
+        setPreguntasEjercicios(edit);
     }
 }
