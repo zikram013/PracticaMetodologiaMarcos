@@ -1,6 +1,8 @@
 package com.company.SubForos;
 
 import com.company.*;
+import com.company.Entradas.Ejercicios;
+import com.company.Entradas.Encuesta;
 import com.company.Entradas.EntradaReal;
 import com.company.Entradas.Texto;
 import com.company.Observer.Observador;
@@ -35,7 +37,7 @@ public class SubForo implements SujetoObservable, Serializable {
     }
 
 
-    public SubForo() {
+    public SubForo(){
 
     }
 
@@ -117,16 +119,17 @@ public class SubForo implements SujetoObservable, Serializable {
         }
     }
 
-    public EntradaAbstracta getEntradaEncontrada(String tituloDeLaEntrada){
+    public EntradaReal getEntradaEncontrada(String tituloDeLaEntrada){
        // System.out.println("Buscando el subforo");
-        for (EntradaAbstracta entradaAbstracta :entry){
-            if(entradaAbstracta.getTituloEntrada().equals(tituloDeLaEntrada)){
+        for (EntradaReal entradaReal :entry){
+            if(entradaReal.getTituloEntrada().equals(tituloDeLaEntrada)){
                // System.out.println("Subforo encontrado");
-                return entradaAbstracta;
+                return entradaReal;
             }
         }
         return null;
     }
+
 
     public void votarEntrada(Usuario user,String tituloDeLaEntrada,String tituloSubForo,String voto){
         String letra=voto;
@@ -138,34 +141,39 @@ public class SubForo implements SujetoObservable, Serializable {
                         if (!(entry.isEmpty())) {
                             System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
                             if (entradaReal.getTituloEntrada().equals(tituloDeLaEntrada)) {
-                                if((entradaReal.getUsuarioHaVotado().isEmpty()) || (!(entradaReal.getUsuarioHaVotado().contains(user)))) {
-                                    System.out.println("Valorar P-positivo N-Negativo");
-                                    do {
-                                        switch (letra) {
-                                            case "P":
-                                                entradaReal.getUsuarioHaVotado().add(user);
-                                                int contadorPositivo;
-                                                contadorPositivo = entradaReal.getValoracionPositiva();
-                                                contadorPositivo++;
-                                                entradaReal.setValoracionPositiva(contadorPositivo);
-                                              //  System.out.println("\n" + entradaReal.getTituloEntrada() +  " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
-                                                //System.out.println(entradaReal.toString());
-                                                System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                                if (!entradaReal.getCreador().equals(user)){
+                                    if((entradaReal.getUsuarioHaVotado().isEmpty()) || (!(entradaReal.getUsuarioHaVotado().contains(user)))) {
+                                        System.out.println("Valorar P-positivo N-Negativo");
+                                        do {
+                                            switch (letra) {
+                                                case "P":
+                                                    entradaReal.getUsuarioHaVotado().add(user);
+                                                    int contadorPositivo;
+                                                    contadorPositivo = entradaReal.getValoracionPositiva();
+                                                    contadorPositivo++;
+                                                    entradaReal.setValoracionPositiva(contadorPositivo);
+                                                    //  System.out.println("\n" + entradaReal.getTituloEntrada() +  " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                                                    //System.out.println(entradaReal.toString());
+                                                    System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
 
-                                                break;
-                                            case "N":
-                                                entradaReal.getUsuarioHaVotado().add(user);
-                                                int contadorNegativo;
-                                                contadorNegativo = entradaReal.getValoracionNegativa();
-                                                contadorNegativo++;
-                                                entradaReal.setValoracionNegativa(contadorNegativo);
-                                                System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
-                                                break;
-                                        }
-                                    } while (letra.equals("S"));
-                                }else {
-                                    System.out.println("no puede votar o ya ha votado");
+                                                    break;
+                                                case "N":
+                                                    entradaReal.getUsuarioHaVotado().add(user);
+                                                    int contadorNegativo;
+                                                    contadorNegativo = entradaReal.getValoracionNegativa();
+                                                    contadorNegativo++;
+                                                    entradaReal.setValoracionNegativa(contadorNegativo);
+                                                    System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa()+" Escrito por: "+ entradaReal.getCreador().getNick());
+                                                    break;
+                                            }
+                                        } while (letra.equals("S"));
+                                    }else {
+                                        System.out.println("no puede votar o ya ha votado");
+                                    }
+                                }else{
+                                    System.out.println("El creador no puede votar");
                                 }
+
                             } else {
                                 System.out.println("No tiene entradas");
                             }
@@ -206,5 +214,24 @@ public class SubForo implements SujetoObservable, Serializable {
                 ", entry=" + entry +
                 ", usuariosSuscritos=" + usuariosSuscritos +
                 '}';
+    }
+
+    public void edicion(Usuario user,String tituloDeLaEntrada,String tituloSubForo,String edicionTitulo,String edicionTexto) {
+        if (user.isConectado()) {
+            for (SubForo subForo : managerSubForos.getListadoDeForos()) {
+                if (subForo.getTituloSubForo().equals(tituloSubForo)) {
+                    System.out.println("listado de entradas");
+                    for (EntradaReal entradaReal : entry) {
+                        if (!(entry.isEmpty())) {
+                            System.out.println("\n" + entradaReal.getTituloEntrada() + " " + "Positivo " + entradaReal.getValoracionPositiva() + " " + "Negativo " + entradaReal.getValoracionNegativa() + " Escrito por: " + entradaReal.getCreador().getNick());
+                            if (entradaReal.getTituloEntrada().equals(tituloDeLaEntrada) && entradaReal.getCreador().equals(user)) {
+                                entradaReal.setTituloEntrada(edicionTitulo);
+                                entradaReal.editar(edicionTexto);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

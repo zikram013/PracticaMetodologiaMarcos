@@ -25,6 +25,11 @@ public class EntradaReal extends EntradaAbstracta {
     }
 
     @Override
+    public void editar(String edit) {
+
+    }
+
+    @Override
     public String toString() {
         return ""+ entradaAbstracta;
     }
@@ -46,6 +51,7 @@ public class EntradaReal extends EntradaAbstracta {
             abstracta.mostrar(profundidad + 1);
         }
     }
+
 
 
 }

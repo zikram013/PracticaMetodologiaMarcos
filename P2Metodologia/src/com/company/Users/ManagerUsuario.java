@@ -28,13 +28,11 @@ public class ManagerUsuario implements Observador, Serializable {
 
 
 
-    public boolean crearUsuario(Usuario usuario){
+    public void crearUsuario(Usuario usuario){
         if(this.getListaDeUsuarios().contains(usuario.getCorreo()) || this.getListaDeUsuarios().contains(usuario.getNick())) {
-            return false;
         }else{
 
             listaDeUsuarios.add(usuario);
-            return true;
         }
     }
 
@@ -82,7 +80,6 @@ public class ManagerUsuario implements Observador, Serializable {
     }
 
     public boolean usuarioRegistrado(Usuario usuarioExiste){
-        System.out.println("Comprobando que existe en el sistema");
         for(Usuario usuario :listaDeUsuarios){
             if(usuario.equals(usuarioExiste)){
                 System.out.println("El usuario exixte");
@@ -94,7 +91,7 @@ public class ManagerUsuario implements Observador, Serializable {
 
     public Usuario usuarioExisteSistema(String correo,String password){
         for(Usuario usuario:listaDeUsuarios){
-            if(usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)){
+            if(usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(password)){
                 return usuario;
             }
         }
@@ -104,8 +101,8 @@ public class ManagerUsuario implements Observador, Serializable {
     public void iniciarSesion(String correo,String password){
         boolean encontrado=false;
         for(Usuario usuario:listaDeUsuarios) {
-            if (usuario.getCorreo().equals(correo) && usuario.getContraseña().equals(password)) {
-                if (!usuario.isConectado() && !usuario.isSancion()) {
+            if (usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(password)) {
+                if(!usuario.isConectado() && !usuario.isSancion()) {
                     encontrado=true;
                     usuario.setConectado(true);
                     System.out.println("Bienvenido: " + usuario.getNombre() + " " + usuario.getApellido());

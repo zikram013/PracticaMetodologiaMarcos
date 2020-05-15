@@ -32,8 +32,13 @@ public class Verificar {
         this.entradasPendienteDeVerificar = entradasPendienteDeVerificar;
     }
 
-    public void entradasParaValidar(EntradaAbstracta entradaAbstracta){
-        entradasPendienteDeVerificar.add((EntradaReal)entradaAbstracta);
+    public boolean entradasParaValidar(EntradaAbstracta entradaAbstracta){
+        if(entradasPendienteDeVerificar.add((EntradaReal)entradaAbstracta)){
+            System.out.println("entrada añadida");
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void verificacion(String aprobacion,EntradaAbstracta entradaAbstracta,Usuario usuario){
@@ -76,13 +81,15 @@ public class Verificar {
         }
     }
 
-    public void eliminar(EntradaAbstracta entradaAbstracta){
+    public boolean eliminar(EntradaAbstracta entradaAbstracta){
         if(!entradasPendienteDeVerificar.isEmpty()) {
             if(entradaAbstracta.isValidacion()){
                 entradasPendienteDeVerificar.removeIf(er -> er.equals(entradaAbstracta));
+                return true;
             }
         }else{
             System.out.println("no hay entradas para eliminar");
         }
+        return false;
     }
 }
