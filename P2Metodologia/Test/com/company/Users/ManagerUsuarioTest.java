@@ -2,6 +2,8 @@ package com.company.Users;
 
 import org.junit.Test;
 
+import java.util.HashSet;
+
 import static org.junit.Assert.*;
 
 public class ManagerUsuarioTest {
@@ -63,5 +65,11 @@ public class ManagerUsuarioTest {
         Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
         managerUsuario.crearUsuario(usuario);
         assertTrue(managerUsuario.guardarInfoUsuarios());
+    }
+
+    @Test
+    public void cargarInformacion(){
+        managerUsuario.setListaDeUsuarios(ManagerUsuario.leerInfoUsuarios());
+        assertEquals("Usuario conectado",true,managerUsuario.usuarioTrasCarga("prueba","prueba"));
     }
 }

@@ -98,6 +98,15 @@ public class ManagerUsuario implements Observador, Serializable {
         return null;
     }
 
+    public boolean usuarioTrasCarga(String correo,String password){
+        for(Usuario usuario:listaDeUsuarios){
+            if(usuario.getCorreo().equals(correo) && usuario.getContrasena().equals(password)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void iniciarSesion(String correo,String password){
         boolean encontrado=false;
         for(Usuario usuario:listaDeUsuarios) {

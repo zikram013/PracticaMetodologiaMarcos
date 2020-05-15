@@ -79,4 +79,11 @@ public class ManagerSubForosTest {
         managerSubForos.crearSubforos(subForo,usuario);
         assertTrue(managerSubForos.guardarInfoForos());
     }
+
+    @Test
+    public void cargarInformacionForos(){
+        managerSubForos.setListadoDeForos(ManagerSubForos.leerInfoForos());
+        assertEquals("test busqueda tras carga",true,managerSubForos.encontrarSubforos("Testing"));
+    }
+
 }
