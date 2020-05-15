@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dace93dc-76f2-4e93-a24a-8c2426e2efd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/SubForos/SubForoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Metodologia/com/company/AllTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Metodologia/com/company/AllTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SubForos/SubForo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/com/company/Users/ManagerUsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/com/company/Users/ManagerUsuarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <recent name="D:\Repositorios\MpIndividual\PracticaMetodologiaMarcos\P2Metodologia\src\com\company\ArchivosTextoPlano" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SubForoTest.votarEntradaNegativa">
+  <component name="RunManager" selected="JUnit.ManagerSubForosTest.guardarInformacionForos">
     <configuration name="All in Metodologia" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Metodologia" />
       <useClassPathOnly />
@@ -101,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubForoTest.edicionEntrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerSubForosTest.guardarInformacionForos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
@@ -110,24 +108,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company.SubForos" />
-      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
-      <option name="METHOD_NAME" value="edicionEntrada" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.ManagerSubForosTest" />
+      <option name="METHOD_NAME" value="guardarInformacionForos" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubForoTest.usuarioYaHaVotado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManagerUsuarioTest.guardarInformacion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Metodologia" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.SubForos.*" />
+          <option name="PATTERN" value="com.company.Users.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.SubForos" />
-      <option name="MAIN_CLASS_NAME" value="com.company.SubForos.SubForoTest" />
-      <option name="METHOD_NAME" value="usuarioYaHaVotado" />
+      <option name="PACKAGE_NAME" value="com.company.Users" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Users.ManagerUsuarioTest" />
+      <option name="METHOD_NAME" value="guardarInformacion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManagerSubForosTest.guardarInformacionForos" />
+        <item itemvalue="JUnit.ManagerUsuarioTest.guardarInformacion" />
+        <item itemvalue="JUnit.AllTest" />
         <item itemvalue="JUnit.SubForoTest.votarEntradaNegativa" />
         <item itemvalue="JUnit.SubForoTest.votarEntradaPositiva" />
-        <item itemvalue="JUnit.AllTest" />
-        <item itemvalue="JUnit.SubForoTest.usuarioYaHaVotado" />
-        <item itemvalue="JUnit.SubForoTest.edicionEntrada" />
       </list>
     </recent_temporary>
   </component>
@@ -257,46 +255,46 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866069350" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585859574213" />
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1589108400784">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589108400784" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407764" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1589108400784">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589122942798" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589108400784" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407764" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1589108400784">
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589122942798" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589108400784" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407764" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1589108400784">
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589122942798" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589108400784" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407764" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589047407765">
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589122942798" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407765" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1589047407765">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407765" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1589047407765">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407765" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1589047407765">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1589536793274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588867700610" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589047407765" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589536793274" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1586185337271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,12 +305,12 @@
     <state x="-1459" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262019797" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1588866604213" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584873464443" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589107845723">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589536167026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1264" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1588262034467" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589107845723" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589015665609" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589470896740" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589536167026" />
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1588866643036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

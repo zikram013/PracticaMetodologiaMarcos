@@ -57,4 +57,11 @@ public class ManagerUsuarioTest {
         managerUsuario.desconectar(usuario);
         assertEquals("Desconectado",false,usuario.isConectado());
     }
+
+    @Test
+    public void guardarInformacion(){
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        managerUsuario.crearUsuario(usuario);
+        assertTrue(managerUsuario.guardarInfoUsuarios());
+    }
 }

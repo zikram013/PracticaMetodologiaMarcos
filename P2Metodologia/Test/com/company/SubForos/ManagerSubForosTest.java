@@ -69,4 +69,14 @@ public class ManagerSubForosTest {
         assertEquals("Ya esta inscrito",false,managerSubForos.inscripcion(subForo,usuario));
 
     }
+
+    @Test
+    public void guardarInformacionForos(){
+        SubForo subForo=new SubForo("Testing",managerSubForos);
+        Usuario usuario=new Usuario("prueba","prueba","prueba","prueba","prueba","profesor");
+        managerUsuario.crearUsuario(usuario);
+        managerUsuario.iniciarSesion(usuario.getCorreo(),usuario.getContrasena());
+        managerSubForos.crearSubforos(subForo,usuario);
+        assertTrue(managerSubForos.guardarInfoForos());
+    }
 }
